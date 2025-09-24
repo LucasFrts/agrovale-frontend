@@ -1,0 +1,17 @@
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo circular -->
+  <circle cx="8" cy="8" r="8" fill="#faf8f3"/>
+  
+  <!-- Tronco da árvore -->
+  <rect x="7" y="10" width="2" height="3" fill="#2d5a3d" rx="0.5"/>
+  
+  <!-- Folhagem - simplificada para 16x16 -->
+  <ellipse cx="8" cy="9" rx="3" ry="2" fill="#165329"/>
+  <ellipse cx="8" cy="7.5" rx="2.5" ry="1.8" fill="#2d5a3d"/>
+  <ellipse cx="8" cy="6" rx="2" ry="1.5" fill="#0f3d1f"/>
+  
+  <!-- Brilho -->
+  <ellipse cx="7.5" cy="5.5" rx="0.8" ry="0.5" fill="#2d5a3d" opacity="0.3"/>
+</svg>
+
+
