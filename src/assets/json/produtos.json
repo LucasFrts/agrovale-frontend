@@ -1,0 +1,686 @@
+[
+  {
+    "categoria": "Rações para Gatos",
+    "descricao": "Cat Chow filhotes 10kg",
+    "fornecedor": "Agroveterinária Timbó",
+    "preco": 171.43,
+    "prazo_entrega": "15 dias",
+    "localizacao": "Timbó",
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA GATOS/Cat chow filhotes 10kg.jpg"
+  },
+  {
+    "categoria": "Rações para Gatos",
+    "descricao": "Magnus cat carne 20kg",
+    "fornecedor": "Adimax",
+    "preco": 225.4,
+    "prazo_entrega": "20 dias",
+    "localizacao": "Salto de Pirapora",
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA GATOS/Magnus cat castrado carne 20kg.jpg"
+  },
+  {
+    "categoria": "Rações para Gatos",
+    "descricao": "Special Cat castrado 10kg",
+    "fornecedor": "Manfim",
+    "preco": 285.4,
+    "prazo_entrega": "20 dias",
+    "localizacao": "Curitiba",
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA GATOS/Special cat castrados 20kg.jpg"
+  },
+  {
+    "categoria": "Rações para Gatos",
+    "descricao": "Friskies sache",
+    "fornecedor": "Agroveterinária Timbó",
+    "preco": 2.76,
+    "prazo_entrega": "15 dias",
+    "localizacao": "Timbó",
+    "imagem": "src/assets/imagem/produtos/SASHES E PETISCOS/Friskeis sache 85g.jpg"
+  },
+  {
+    "categoria": "Rações para Cachorro",
+    "descricao": "Special dog Junior 15kg",
+    "fornecedor": "Manfrim",
+    "preco": 180.21,
+    "prazo_entrega": "20 dias",
+    "localizacao": "Curitiba",
+    "imagem": ""
+  },
+  {
+    "categoria": "Rações para Cachorro",
+    "descricao": "Special dog carne 20kg",
+    "fornecedor": "Manfrim",
+    "preco": 140.31,
+    "prazo_entrega": "20 dias",
+    "localizacao": "Curitiba",
+    "imagem": ""
+  },
+  {
+    "categoria": "Rações para Cachorro",
+    "descricao": "Magnus 15kg",
+    "fornecedor": "Adimax",
+    "preco": 114.79,
+    "prazo_entrega": "20 dias",
+    "localizacao": "Salto de Pirapora",
+    "imagem": ""
+  },
+  {
+    "categoria": "Rações para Cachorro",
+    "descricao": "Dog Chow sache",
+    "fornecedor": "Agroveterinária Timbó",
+    "preco": 2.76,
+    "prazo_entrega": "15 dias",
+    "localizacao": "Timbó",
+    "imagem": "src/assets/imagem/produtos/SASHES E PETISCOS/Dog chow sache 100g.jpg"
+  },
+  {
+    "categoria": "Rações para Animais de Criação",
+    "descricao": "Coasul aves inicial 25kg",
+    "fornecedor": "Aliança",
+    "preco": 106.86,
+    "prazo_entrega": "7 dias",
+    "localizacao": "Pouso Redondo",
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA ANIMAIS DE CRIAÇÃO/Coasul aves de corte inicial 25kg.jpg"
+  },
+  {
+    "categoria": "Rações para Animais de Criação",
+    "descricao": "Coasul aves final 25kg",
+    "fornecedor": "Aliança",
+    "preco": 94.71,
+    "prazo_entrega": "7 dias",
+    "localizacao": "Pouso Redondo",
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA ANIMAIS DE CRIAÇÃO/Coasul aves de corte final 25kg.jpg"
+  },
+  {
+    "categoria": "Rações para Animais de Criação",
+    "descricao": "Coasul suino inicial 25kg",
+    "fornecedor": "Aliança",
+    "preco": 89.29,
+    "prazo_entrega": "7 dias",
+    "localizacao": "Pouso Redondo",
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA ANIMAIS DE CRIAÇÃO/Coasul suino inicial 25kg.jpg"
+  },
+  {
+    "categoria": "Rações para Animais de Criação",
+    "descricao": "Coasul suino final 25kg",
+    "fornecedor": "Aliança",
+    "preco": 85.43,
+    "prazo_entrega": "7 dias",
+    "localizacao": "Pouso Redondo",
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA ANIMAIS DE CRIAÇÃO/Coasul suino terminação 25kg.jpg"
+  },
+  {
+    "categoria": "Rações para Animais de Criação",
+    "descricao": "Vicato aves postura 25kg",
+    "fornecedor": "Vicato",
+    "preco": 87.57,
+    "prazo_entrega": "25 dias",
+    "localizacao": "Sananduva",
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA ANIMAIS DE CRIAÇÃO/Coasul aves postura 25kg.jpg"
+  },
+  {
+    "categoria": "Rações para Animais de Criação",
+    "descricao": "Vicato farelo de soja 25kg",
+    "fornecedor": "Vicato",
+    "preco": null,
+    "prazo_entrega": "25 dias",
+    "localizacao": "Sananduva",
+    "imagem": ""
+  },
+  {
+    "categoria": "Rações para Animais de Criação",
+    "descricao": "Adm concentrado postura 20kg",
+    "fornecedor": "Aliança",
+    "preco": 94.57,
+    "prazo_entrega": "7 dias",
+    "localizacao": "Pouso Redondo",
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA ANIMAIS DE CRIAÇÃO/Concentrado postura ADM 20kg.jpg"
+  },
+  {
+    "categoria": "Produtos para Lavoura",
+    "descricao": "Pulverizador 20L",
+    "fornecedor": "Diamaju",
+    "preco": 197.36,
+    "prazo_entrega": "2 dias",
+    "localizacao": "Curitibanos",
+    "imagem": "src/assets/imagem/produtos/PRODUTOS PARA LAVOURA/Pulverizador STARK 20L.jpg"
+  },
+  {
+    "categoria": "Produtos para Lavoura",
+    "descricao": "Metarex",
+    "fornecedor": "Diamaju",
+    "preco": 10.33,
+    "prazo_entrega": "2 dias",
+    "localizacao": "Curitibanos",
+    "imagem": "src/assets/imagem/produtos/PRODUTOS PARA LAVOURA/Metarex_.jpg"
+  },
+  {
+    "categoria": "Produtos para Lavoura",
+    "descricao": "Nitrobras",
+    "fornecedor": "Diamaju",
+    "preco": null,
+    "prazo_entrega": "2 dias",
+    "localizacao": "Curitibanos",
+    "imagem": ""
+  },
+  {
+    "categoria": "Produtos para Lavoura",
+    "descricao": "Regador 10L",
+    "fornecedor": "Basso e Pancotte",
+    "preco": null,
+    "prazo_entrega": "3 dias",
+    "localizacao": "Nova Alvorada",
+    "imagem": ""
+  },
+  {
+    "categoria": "Sais Minerais",
+    "descricao": "Vacci phos 40",
+    "fornecedor": "Vaccinar",
+    "preco": 101.09,
+    "prazo_entrega": "45 dias",
+    "localizacao": "Pinhais",
+    "imagem": "src/assets/imagem/produtos/SAIS MINERAIS/Vacci phós 40 30Kg.jpg"
+  },
+  {
+    "categoria": "Sais Minerais",
+    "descricao": "Vacci phos 60ADE leite",
+    "fornecedor": "Vaccinar",
+    "preco": 203.5,
+    "prazo_entrega": "45 dias",
+    "localizacao": "Pinhais",
+    "imagem": "src/assets/imagem/produtos/SAIS MINERAIS/Vacci phós 60 ADE leite 30Kg.jpg"
+  },
+  {
+    "categoria": "Sais Minerais",
+    "descricao": "Bovimaster bezerro",
+    "fornecedor": "Vaccinar",
+    "preco": 158.91,
+    "prazo_entrega": "45 dias",
+    "localizacao": "Pinhais",
+    "imagem": "src/assets/imagem/produtos/SAIS MINERAIS/Bovimaster bezerro 30Kg.jpg"
+  },
+  {
+    "categoria": "Medicamentos",
+    "descricao": "Antitóxico 100ml",
+    "fornecedor": "Vetminas",
+    "preco": 20.01,
+    "prazo_entrega": "20 dias",
+    "localizacao": "São Paulo",
+    "imagem": "src/assets/imagem/produtos/MEDICAMENTOS/Antitóxico biofarm 100ml.jpg"
+  },
+  {
+    "categoria": "Medicamentos",
+    "descricao": "Babecid 30ml",
+    "fornecedor": "Vetminas",
+    "preco": 32.5,
+    "prazo_entrega": "20 dias",
+    "localizacao": "São Paulo",
+    "imagem": "src/assets/imagem/produtos/MEDICAMENTOS/Babecid 50ml.jpg"
+  },
+  {
+    "categoria": "Medicamentos",
+    "descricao": "Terramicina 50ml",
+    "fornecedor": "Vetminas",
+    "preco": 25.81,
+    "prazo_entrega": "20 dias",
+    "localizacao": "São Paulo",
+    "imagem": "src/assets/imagem/produtos/MEDICAMENTOS/Terramicina LA 50ml.jpg"
+  },
+  {
+    "categoria": "Medicamentos",
+    "descricao": "D-500 50ml",
+    "fornecedor": "Vetminas",
+    "preco": null,
+    "prazo_entrega": "20 dias",
+    "localizacao": "São Paulo",
+    "imagem": ""
+  },
+  {
+    "categoria": "Vitaminas Pet",
+    "descricao": "Munnomax 50g",
+    "fornecedor": "agro veterinária Timbó",
+    "preco": 105.94,
+    "prazo_entrega": "15 dias",
+    "localizacao": "Timbó",
+    "imagem": "src/assets/imagem/produtos/VITAMINAS PET/Munnomax 50g.jpg"
+  },
+  {
+    "categoria": "Vitaminas Pet",
+    "descricao": "Glutamina 30ml",
+    "fornecedor": "agro veterinária Timbó",
+    "preco": 33.14,
+    "prazo_entrega": "15 dias",
+    "localizacao": "Timbó",
+    "imagem": "src/assets/imagem/produtos/VITAMINAS PET/Glutamina 30ml.jpg"
+  },
+  {
+    "categoria": "Proteção Individual",
+    "descricao": "Bota ultraleve",
+    "fornecedor": "Basso e Pancotte",
+    "preco": 89.93,
+    "prazo_entrega": "3 dias",
+    "localizacao": "Nova Alvorada",
+    "imagem": "src/assets/imagem/produtos/PROTEÇÃO INDIVIDUAL/Bota ultraleve Baspan.jpg"
+  },
+  {
+    "categoria": "Proteção Individual",
+    "descricao": "Capa de chuva",
+    "fornecedor": "Basso e Pancotte",
+    "preco": 21.69,
+    "prazo_entrega": "3 dias",
+    "localizacao": "Nova Alvorada",
+    "imagem": "src/assets/imagem/produtos/PROTEÇÃO INDIVIDUAL/Capa de chuva descartável.jpg"
+  },
+  {
+    "categoria": "Rações para Gatos",
+    "descricao": "Cat Chow castrados 10kg",
+    "fornecedor": "Não preenchido",
+    "preco": 172.2,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA GATOS/Cat chow castrados 10kg.jpg"
+  },
+  {
+    "categoria": "Rações para Gatos",
+    "descricao": "Friskies filhotes 10kg",
+    "fornecedor": "Não preenchido",
+    "preco": 192.21,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA GATOS/Friskies filhotes 10kg.jpg"
+  },
+  {
+    "categoria": "Rações para Gatos",
+    "descricao": "Friskies mar de sabores 10kg",
+    "fornecedor": "Não preenchido",
+    "preco": 192.77,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA GATOS/Friskies mar de sabores 10kg.jpg"
+  },
+  {
+    "categoria": "Rações para Gatos",
+    "descricao": "Magnus cat adulto salmão 20kg",
+    "fornecedor": "Não preenchido",
+    "preco": 213.83,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA GATOS/Magnus cat adulto salmão 20kg.jpg"
+  },
+  {
+    "categoria": "Rações para Gatos",
+    "descricao": "Special cat mix 20kg",
+    "fornecedor": "Não preenchido",
+    "preco": 255.34,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA GATOS/Special cat mix 20kg.jpg"
+  },
+  {
+    "categoria": "Rações para Animais de Criação",
+    "descricao": "Coasul concentrado aves de corte 25kg",
+    "fornecedor": "Não preenchido",
+    "preco": 124.86,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA ANIMAIS DE CRIAÇÃO/Coasul concentrado aves de corte 25kg.jpg"
+  },
+  {
+    "categoria": "Rações para Animais de Criação",
+    "descricao": "Coasul concentrado suino 25kg",
+    "fornecedor": "Não preenchido",
+    "preco": 112.29,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA ANIMAIS DE CRIAÇÃO/Coasul concentrado suino 25kg.jpg"
+  },
+  {
+    "categoria": "Rações para Animais de Criação",
+    "descricao": "Ração codorna postura ADM 5kg",
+    "fornecedor": "Não preenchido",
+    "preco": 19.0,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA ANIMAIS DE CRIAÇÃO/Ração codorna postura ADM 5kg.jpg"
+  },
+  {
+    "categoria": "Rações para Animais de Criação",
+    "descricao": "Ração coelhos ADM 5kg",
+    "fornecedor": "Não preenchido",
+    "preco": 18.57,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA ANIMAIS DE CRIAÇÃO/Ração coelhos ADM 5kg.jpg"
+  },
+  {
+    "categoria": "Sais Minerais",
+    "descricao": "Sal médio 25kg",
+    "fornecedor": "Não preenchido",
+    "preco": 29.43,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/SAIS MINERAIS/Sal médio 25kg.jpg"
+  },
+  {
+    "categoria": "Saches e Petiscos",
+    "descricao": "Petisco carne doguitos",
+    "fornecedor": "Não preenchido",
+    "preco": 7.89,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/SASHES E PETISCOS/Petisco carne doguitos.jpg"
+  },
+  {
+    "categoria": "Saches e Petiscos",
+    "descricao": "Special dog Bifinhos 60g",
+    "fornecedor": "Não preenchido",
+    "preco": 22.61,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/SASHES E PETISCOS/Special doh Bifinhos 60g.jpg"
+  },
+  {
+    "categoria": "Vitaminas Pet",
+    "descricao": "Defenza 200mg",
+    "fornecedor": "Não preenchido",
+    "preco": 69.79,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/VITAMINAS PET/Defenza 200mg.jpg"
+  },
+  {
+    "categoria": "Vitaminas Pet",
+    "descricao": "Vectra gatos 1ml",
+    "fornecedor": "Não preenchido",
+    "preco": 29.34,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/VITAMINAS PET/Vectra gatos 1ml.jpg"
+  },
+  {
+    "categoria": "Proteção Individual",
+    "descricao": "Luva latex",
+    "fornecedor": "Não preenchido",
+    "preco": 4.46,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/PROTEÇÃO INDIVIDUAL/Luva latex.jpg"
+  },
+  {
+    "categoria": "Proteção Individual",
+    "descricao": "Luva preta",
+    "fornecedor": "Não preenchido",
+    "preco": 3.24,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/PROTEÇÃO INDIVIDUAL/Luva preta.jpg"
+  },
+  {
+    "categoria": "Produtos para Lavoura",
+    "descricao": "Grão verde formicida",
+    "fornecedor": "Não preenchido",
+    "preco": 0.57,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/PRODUTOS PARA LAVOURA/Grão verde formicida.jpg"
+  },
+  {
+    "categoria": "Produtos para Lavoura",
+    "descricao": "Lanirat raticida girassol",
+    "fornecedor": "Não preenchido",
+    "preco": 2.24,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/PRODUTOS PARA LAVOURA/Lanirat raticida girassol.jpg"
+  },
+  {
+    "categoria": "Produtos para Lavoura",
+    "descricao": "Pulverizador STARK 12L",
+    "fornecedor": "Não preenchido",
+    "preco": 167.54,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/PRODUTOS PARA LAVOURA/Pulverizador STARK 12L.jpg"
+  },
+  {
+    "categoria": "Produtos para Lavoura",
+    "descricao": "Pulverizador STARK elétrica e manual 20L",
+    "fornecedor": "Não preenchido",
+    "preco": 368.51,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/PRODUTOS PARA LAVOURA/Pulverizador STARK elétrica e manual 20L.jpg"
+  },
+  {
+    "categoria": "Medicamentos",
+    "descricao": "Borgal 50ml",
+    "fornecedor": "Não preenchido",
+    "preco": 75.7,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/MEDICAMENTOS/Borgal 50ml.jpg"
+  },
+  {
+    "categoria": "Medicamentos",
+    "descricao": "Calciofarm 500ml",
+    "fornecedor": "Não preenchido",
+    "preco": 30.43,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/MEDICAMENTOS/Calciofarm 500ml.jpg"
+  },
+  {
+    "categoria": "Medicamentos",
+    "descricao": "Corta curso 50ml",
+    "fornecedor": "Não preenchido",
+    "preco": 51.7,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/MEDICAMENTOS/Corta curso 50ml.jpg"
+  },
+  {
+    "categoria": "Medicamentos",
+    "descricao": "Febrax 50ml",
+    "fornecedor": "Não preenchido",
+    "preco": 11.79,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/MEDICAMENTOS/Febrax 50ml.jpg"
+  },
+  {
+    "categoria": "Medicamentos",
+    "descricao": "Flunixin 50ml",
+    "fornecedor": "Não preenchido",
+    "preco": 42.29,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/MEDICAMENTOS/Flunixin 50ml.jpg"
+  },
+  {
+    "categoria": "Medicamentos",
+    "descricao": "Pencivet 50ml",
+    "fornecedor": "Não preenchido",
+    "preco": 51.71,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/MEDICAMENTOS/Pencivet 50ml.jpg"
+  },
+  {
+    "categoria": "Medicamentos",
+    "descricao": "Soluceff PPU 100ml",
+    "fornecedor": "Não preenchido",
+    "preco": 75.14,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/MEDICAMENTOS/Soluceff PPU 100ml.jpg"
+  },
+  {
+    "categoria": "Medicamentos",
+    "descricao": "Sorofarm 500ml",
+    "fornecedor": "Não preenchido",
+    "preco": 24.27,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/MEDICAMENTOS/Sorofarm 500ml.jpg"
+  },
+  {
+    "categoria": "Bebedouros e Comedouros",
+    "descricao": "Bebedouro frango 5L",
+    "fornecedor": "Não preenchido",
+    "preco": 13.29,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/BEBEDOUROS E COMEDOUROS/Bebedouro frango 5L.jpg"
+  },
+  {
+    "categoria": "Bebedouros e Comedouros",
+    "descricao": "Comedouro automático 10L",
+    "fornecedor": "Não preenchido",
+    "preco": 47.14,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/BEBEDOUROS E COMEDOUROS/Comedouro automático 10L.webp"
+  },
+  {
+    "categoria": "Bebedouros e Comedouros",
+    "descricao": "Comedouro duplo para pet",
+    "fornecedor": "Não preenchido",
+    "preco": 25.71,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/BEBEDOUROS E COMEDOUROS/Comedouro duplo para pet.webp"
+  },
+  {
+    "categoria": "Bebedouros e Comedouros",
+    "descricao": "Comedouro frango 5kg",
+    "fornecedor": "Não preenchido",
+    "preco": 28.89,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/BEBEDOUROS E COMEDOUROS/Comedouro frango 5kg.jpg"
+  },
+  {
+    "categoria": "Bebedouros e Comedouros",
+    "descricao": "Comedouro para pet",
+    "fornecedor": "Não preenchido",
+    "preco": null,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/BEBEDOUROS E COMEDOUROS/Comedouro para pet.webp"
+  },
+  {
+    "categoria": "Bebedouros e Comedouros",
+    "descricao": "Kit bebedouro e comedouro azul",
+    "fornecedor": "Não preenchido",
+    "preco": 14.51,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/BEBEDOUROS E COMEDOUROS/Kit bebedouro e comedouro azul.jpg"
+  },
+  {
+    "categoria": "Bebedouros e Comedouros",
+    "descricao": "Kit bebedouro e comedouro preto",
+    "fornecedor": "Não preenchido",
+    "preco": 14.51,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/BEBEDOUROS E COMEDOUROS/Kit bebedouro e comedouro preto.jpg"
+  },
+  {
+    "categoria": "Areias e Tapetes para Pet",
+    "descricao": "Areia granulada mitzi 12kg",
+    "fornecedor": "Não preenchido",
+    "preco": 31.41,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/AREIAS E TAPETES PARA PET/Areia granulada mitzi 12kg.jpg"
+  },
+  {
+    "categoria": "Areias e Tapetes para Pet",
+    "descricao": "Areia granulada mitzi 4kg",
+    "fornecedor": "Não preenchido",
+    "preco": 16.17,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/AREIAS E TAPETES PARA PET/Areia granulada mitzi 4kg.jpg"
+  },
+  {
+    "categoria": "Areias e Tapetes para Pet",
+    "descricao": "Tapete higiênico branco 60×60",
+    "fornecedor": "Não preenchido",
+    "preco": 1.64,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/AREIAS E TAPETES PARA PET/Tapete higiênico branco 60×60.jpg"
+  },
+  {
+    "categoria": "Areias e Tapetes para Pet",
+    "descricao": "Tapete higiênico carvão ativado 80×60",
+    "fornecedor": "Não preenchido",
+    "preco": 3.19,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/AREIAS E TAPETES PARA PET/Tapete higiênico carvão ativado 80×60.jpg"
+  },
+  {
+    "categoria": "Acessórios Pet",
+    "descricao": "Cama quadrada pelúcia cinza",
+    "fornecedor": "Não preenchido",
+    "preco": 45.71,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/ACESSÓRIOS PET/Cama quadrada pelúcia cinza.jpg"
+  },
+  {
+    "categoria": "Acessórios Pet",
+    "descricao": "Cama quadrada pelúcia rosa",
+    "fornecedor": "Não preenchido",
+    "preco": 70.94,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/ACESSÓRIOS PET/Cama quadrada pelúcia rosa.webp"
+  },
+  {
+    "categoria": "Acessórios Pet",
+    "descricao": "Cama quadrada pelúcia violeta",
+    "fornecedor": "Não preenchido",
+    "preco": 70.94,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/ACESSÓRIOS PET/Cama quadrada pelúcia violeta.webp"
+  },
+  {
+    "categoria": "Acessórios Pet",
+    "descricao": "Coleira elástica pet colorida",
+    "fornecedor": "Não preenchido",
+    "preco": 6.29,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/ACESSÓRIOS PET/Coleira elástica pet colorida.jpg"
+  },
+  {
+    "categoria": "Acessórios Pet",
+    "descricao": "Guia rosa para gatos",
+    "fornecedor": "Não preenchido",
+    "preco": 14.07,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/ACESSÓRIOS PET/Guia rosa para gatos.webp"
+  },
+  {
+    "categoria": "Acessórios Pet",
+    "descricao": "Kit acessórios para cães",
+    "fornecedor": "Não preenchido",
+    "preco": null,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/ACESSÓRIOS PET/Kit acessórios para cães.jpg"
+  },
+  {
+    "categoria": "Acessórios Pet",
+    "descricao": "Kit acessórios para pet",
+    "fornecedor": "Não preenchido",
+    "preco": null,
+    "prazo_entrega": "Não preenchido",
+    "localizacao": "Não preenchido",
+    "imagem": "src/assets/imagem/produtos/ACESSÓRIOS PET/Kit acessórios para pet.webp"
+  }
+]

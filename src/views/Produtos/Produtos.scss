@@ -1,0 +1,395 @@
+// ===============================================
+// PRODUTOS PAGE STYLES - AGROVALE
+// ===============================================
+
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+// ===============================================
+// PRODUTOS PAGE LAYOUT
+// ===============================================
+
+.produtos-page {
+  min-height: 100vh;
+  background: $gradient-primary;
+
+  &__promotions {
+    margin-bottom: $spacing-xl;
+  }
+
+  &__main-section {
+    @include section-spacing;
+    background: linear-gradient(180deg, transparent, $bg-secondary);
+  }
+}
+
+// ===============================================
+// PRODUCTS SECTION
+// ===============================================
+
+// ===== LAYOUT BOOTSTRAP OTIMIZADO - OCUPANDO TODA A TELA COMO HOME =====
+.produtos-page__main-section {
+  .container-fluid {
+    // ❌ Removido: max-width: 1400px para ocupar toda a tela como Home
+    // ❌ Removido: margin: 0 auto para ocupar toda a tela como Home
+    
+    .row {
+      --bs-gutter-x: 2rem; // Espaçamento entre colunas mantido
+    }
+  }
+  
+  // Coluna da sidebar (col-lg-3)
+  .col-lg-3 {
+    padding-right: 1rem; // Espaçamento da sidebar
+    
+    @include mobile-only {
+      display: none !important;
+    }
+  }
+  
+  // Coluna principal dos produtos (col-lg-9) 
+  .col-lg-9 {
+    padding-left: 1rem; // Espaçamento dos produtos
+    
+    @include mobile-only {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+
+// ===============================================
+// PRODUCTS CONTAINER
+// ===============================================
+
+.products-container {
+  &__header {
+    margin-bottom: $spacing-xl;
+
+    @include mobile-only {
+      margin-bottom: $spacing-lg;
+    }
+  }
+
+  &__grid {
+    @include fade-in-up;
+  }
+
+  &__load-more {
+    margin-top: $spacing-xl;
+    text-align: center;
+
+    @include mobile-only {
+      margin-top: $spacing-lg;
+    }
+  }
+}
+
+// ===============================================
+// SECTION HEADER PRODUCTS
+// ===============================================
+
+.section-header {
+  @include card-base;
+  padding: $spacing-xl;
+  margin-bottom: $spacing-xl;
+  border: 1px solid $bg-tertiary;
+
+  @include mobile-only {
+    padding: $spacing-lg;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: $spacing-lg;
+
+    @include mobile-only {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__main {
+    flex-grow: 1;
+  }
+
+  &__mobile-controls {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    margin-bottom: $spacing-md;
+
+    @include mobile-only {
+      margin-bottom: $spacing-sm;
+    }
+  }
+
+  &__filters-btn {
+    flex-shrink: 0;
+
+    @include desktop-up {
+      display: none;
+    }
+  }
+
+  &__title-group {
+    flex-grow: 1;
+  }
+
+  &__title {
+    @include heading-base;
+    font-size: $font-size-3xl;
+    margin-bottom: $spacing-sm;
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+
+    @include mobile-only {
+      font-size: $font-size-2xl;
+    }
+
+    .section-header__icon {
+      @include text-accent;
+    }
+  }
+
+  &__description {
+    @include text-secondary;
+    margin-bottom: 0;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    align-items: flex-end;
+
+    @include tablet-up {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    @include mobile-only {
+      width: 100%;
+      align-items: stretch;
+    }
+  }
+}
+
+// ===============================================
+// SEARCH CONTAINER
+// ===============================================
+
+.search-container {
+  width: 100%;
+  max-width: 300px;
+
+  @include mobile-only {
+    max-width: none;
+  }
+}
+
+// ===============================================
+// SORT CONTROLS
+// ===============================================
+
+.sort-controls {
+  min-width: 180px;
+
+  @include mobile-only {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .form-select {
+    background-color: $bg-darker;
+    border-color: $bg-tertiary;
+    @include text-primary;
+
+    &:focus {
+      border-color: $color-accent-primary;
+      box-shadow: 0 0 0 0.2rem rgba($color-accent-primary, 0.25);
+    }
+  }
+}
+
+// ===============================================
+// ACTIVE FILTERS
+// ===============================================
+
+.active-filters {
+  background: rgba($color-accent-primary, 0.1);
+  border-radius: $border-radius;
+  padding: $spacing-md;
+  border: 1px solid rgba($color-accent-primary, 0.2);
+  margin-bottom: $spacing-lg;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  &__label {
+    @include text-secondary;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    margin-right: $spacing-sm;
+  }
+
+  &__badge {
+    background: $color-accent-primary;
+    color: $color-text-primary;
+    border-radius: $border-radius-xl;
+    padding: $spacing-xs $spacing-md;
+    font-size: $font-size-sm;
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  &__clear-btn {
+    background: none;
+    border: none;
+    @include text-secondary;
+    font-size: $font-size-sm;
+    margin-left: $spacing-sm;
+    cursor: pointer;
+
+    &:hover {
+      @include text-primary;
+    }
+  }
+}
+
+// ===============================================
+// CLOSE BUTTON
+// ===============================================
+
+.btn-close-white {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+// ===============================================
+// EMPTY STATE
+// ===============================================
+
+.empty-state {
+  @include card-base;
+  padding: $spacing-3xl $spacing-xl;
+  text-align: center;
+  border: 1px solid $bg-tertiary;
+
+  @include mobile-only {
+    padding: $spacing-xl $spacing-lg;
+  }
+
+  &__icon {
+    font-size: 4rem;
+    @include text-secondary;
+    opacity: 0.5;
+    margin-bottom: $spacing-xl;
+
+    @include mobile-only {
+      font-size: 3rem;
+      margin-bottom: $spacing-lg;
+    }
+  }
+
+  &__title {
+    @include text-secondary;
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacing-md;
+
+    @include mobile-only {
+      font-size: $font-size-xl;
+    }
+  }
+
+  &__description {
+    @include text-secondary;
+    line-height: $line-height-relaxed;
+    margin-bottom: $spacing-xl;
+
+    @include mobile-only {
+      margin-bottom: $spacing-lg;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacing-md;
+    justify-content: center;
+
+    @include mobile-only {
+      flex-direction: column;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// ===============================================
+// RESPONSIVE ADJUSTMENTS
+// ===============================================
+
+@include mobile-only {
+  .products-container {
+    padding: 0 $spacing-sm;
+  }
+
+  .section-header {
+    &__content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__actions {
+      width: 100%;
+
+      > * {
+        flex: 1;
+      }
+    }
+  }
+
+  .search-container {
+    order: 1;
+  }
+
+  .sort-controls {
+    order: 2;
+  }
+}
+
+@media (max-width: 576px) {
+  .produtos-page {
+    :deep(.col-sm-6) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+// ===============================================
+// ANIMATIONS
+// ===============================================
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

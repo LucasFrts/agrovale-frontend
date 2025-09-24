@@ -1,0 +1,226 @@
+# ===== DEPENDENCIES =====
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ===== BUILD OUTPUTS =====
+dist/
+dist-ssr/
+*.local
+
+# ===== ENVIRONMENT VARIABLES =====
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ===== EDITOR DIRECTORIES AND FILES =====
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ===== OS GENERATED FILES =====
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ===== LOGS =====
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ===== RUNTIME DATA =====
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# ===== COVERAGE DIRECTORY USED BY TOOLS LIKE ISTANBUL =====
+coverage/
+*.lcov
+
+# ===== NYC TEST COVERAGE =====
+.nyc_output/
+
+# ===== GRUNT INTERMEDIATE STORAGE =====
+.grunt/
+
+# ===== BOWER DEPENDENCY DIRECTORY =====
+bower_components/
+
+# ===== NODE-WAF CONFIGURATION =====
+.lock-wscript
+
+# ===== COMPILED BINARY ADDONS =====
+build/Release/
+
+# ===== DEPENDENCY DIRECTORIES =====
+jspm_packages/
+
+# ===== TYPESCRIPT CACHE =====
+*.tsbuildinfo
+
+# ===== OPTIONAL NPM CACHE DIRECTORY =====
+.npm
+
+# ===== OPTIONAL ESLINT CACHE =====
+.eslintcache
+
+# ===== OPTIONAL STYLELINT CACHE =====
+.stylelintcache
+
+# ===== MICROBUNDLE CACHE =====
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# ===== OPTIONAL REPL HISTORY =====
+.node_repl_history
+
+# ===== OUTPUT OF 'NPM PACK' =====
+*.tgz
+
+# ===== YARN INTEGRITY FILE =====
+.yarn-integrity
+
+# ===== PARCEL-BUNDLER CACHE =====
+.cache/
+.parcel-cache/
+
+# ===== NEXT.JS BUILD OUTPUT =====
+.next/
+
+# ===== NUXT.JS BUILD / GENERATE OUTPUT =====
+.nuxt/
+.output/
+
+# ===== VITE BUILD OUTPUT =====
+.vite/
+
+# ===== ROLLUP BUILD OUTPUT =====
+.rollup.cache/
+
+# ===== STORYBOOK BUILD OUTPUTS =====
+storybook-static/
+out/
+
+# ===== TEMPORARY FOLDERS =====
+tmp/
+temp/
+
+# ===== VUE.JS SPECIFIC =====
+# Vue CLI build output
+dist/
+
+# Vue.js dev build
+*.vue.js
+
+# ===== FIREBASE =====
+.firebase/
+.firebaserc
+firebase-debug.log
+firebase-debug.*.log
+
+# ===== NETLIFY =====
+.netlify/
+
+# ===== VERCEL =====
+.vercel/
+
+# ===== DOCKER =====
+.dockerignore
+Dockerfile
+docker-compose.yml
+docker-compose.override.yml
+
+# ===== DATABASE =====
+*.db
+*.sqlite
+*.sqlite3
+
+# ===== BACKUP FILES =====
+*.backup
+*.bak
+*.swp
+*.swo
+*~
+
+# ===== PACKAGE MANAGER LOCKS (OPCIONAL) =====
+# Descomente se quiser ignorar os lock files
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# ===== TESTING =====
+# Jest
+coverage/
+.nyc_output/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+
+# ===== LINTING =====
+.eslintcache
+.stylelintcache
+
+# ===== BUNDLE ANALYZER =====
+bundle-report.html
+
+# ===== SOURCE MAPS (OPCIONAL) =====
+# Descomente se não quiser incluir source maps
+# *.map
+
+# ===== IDE SPECIFIC =====
+# WebStorm
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+.cursor
+# ===== CUSTOM PROJECT FILES =====
+# Adicione aqui arquivos específicos do seu projeto
+# Exemplo:
+# config/local.js
+# uploads/
+# public/uploads/

@@ -1,0 +1,242 @@
+[
+    {
+      "categoria": "Rações para Gatos",
+      "descricao": "Cat Chow filhotes 10kg",
+      "fornecedor": "Agroveterinária Timbó",
+      "preco": 107.50,
+      "prazo_entrega": "15 dias",
+      "localizacao": "Timbó"
+    },
+    {
+      "categoria": "Rações para Gatos",
+      "descricao": "Magnus cat carne 20kg",
+      "fornecedor": "Adimax",
+      "preco": 104.70,
+      "prazo_entrega": "20 dias",
+      "localizacao": "Salto de Pirapora"
+    },
+    {
+      "categoria": "Rações para Gatos",
+      "descricao": "Special Cat castrado 10kg",
+      "fornecedor": "Manfim",
+      "preco": 107.50,
+      "prazo_entrega": "20 dias",
+      "localizacao": "Curitiba"
+    },
+    {
+      "categoria": "Rações para Gatos",
+      "descricao": "Friskies sache",
+      "fornecedor": "Agroveterinária Timbó",
+      "preco": 1.93,
+      "prazo_entrega": "15 dias",
+      "localizacao": "Timbó"
+    },
+    {
+      "categoria": "Rações para Cachorro",
+      "descricao": "Special dog Junior 15kg",
+      "fornecedor": "Manfrim",
+      "preco": 110.25,
+      "prazo_entrega": "20 dias",
+      "localizacao": "Curitiba"
+    },
+    {
+      "categoria": "Rações para Cachorro",
+      "descricao": "Special dog carne 20kg",
+      "fornecedor": "Manfrim",
+      "preco": 79.71,
+      "prazo_entrega": "20 dias",
+      "localizacao": "Curitiba"
+    },
+    {
+      "categoria": "Rações para Cachorro",
+      "descricao": "Magnus 15kg",
+      "fornecedor": "Adimax",
+      "preco": 88.00,
+      "prazo_entrega": "20 dias",
+      "localizacao": "Salto de Pirapora"
+    },
+    {
+      "categoria": "Rações para Cachorro",
+      "descricao": "Dog Chow sache",
+      "fornecedor": "Agroveterinária Timbó",
+      "preco": 1.93,
+      "prazo_entrega": "15 dias",
+      "localizacao": "Timbó"
+    },
+    {
+      "categoria": "Rações para Animais de Criação",
+      "descricao": "Coasul aves inicial 25kg",
+      "fornecedor": "Aliança",
+      "preco": 65.10,
+      "prazo_entrega": "7 dias",
+      "localizacao": "Pouso Redondo"
+    },
+    {
+      "categoria": "Rações para Animais de Criação",
+      "descricao": "Coasul aves final 25kg",
+      "fornecedor": "Aliança",
+      "preco": 54.23,
+      "prazo_entrega": "7 dias",
+      "localizacao": "Pouso Redondo"
+    },
+    {
+      "categoria": "Rações para Animais de Criação",
+      "descricao": "Coasul suino inicial 25kg",
+      "fornecedor": "Aliança",
+      "preco": 51.15,
+      "prazo_entrega": "7 dias",
+      "localizacao": "Pouso Redondo"
+    },
+    {
+      "categoria": "Rações para Animais de Criação",
+      "descricao": "Coasul suino final 25kg",
+      "fornecedor": "Aliança",
+      "preco": 53.33,
+      "prazo_entrega": "7 dias",
+      "localizacao": "Pouso Redondo"
+    },
+    {
+      "categoria": "Rações para Animais de Criação",
+      "descricao": "Vicato aves postura 25kg",
+      "fornecedor": "Vicato",
+      "preco": 41.88,
+      "prazo_entrega": "25 dias",
+      "localizacao": "Sananduva"
+    },
+    {
+      "categoria": "Rações para Animais de Criação",
+      "descricao": "Vicato farelo de soja 25kg",
+      "fornecedor": "Vicato",
+      "preco": 33.11,
+      "prazo_entrega": "25 dias",
+      "localizacao": "Sananduva"
+    },
+    {
+      "categoria": "Rações para Animais de Criação",
+      "descricao": "Adm concentrado postura 20kg",
+      "fornecedor": "Aliança",
+      "preco": 71.68,
+      "prazo_entrega": "7 dias",
+      "localizacao": "Pouso Redondo"
+    },
+    {
+      "categoria": "Produtos para Lavoura",
+      "descricao": "Pulverizador 20L",
+      "fornecedor": "Diamaju",
+      "preco": 176.24,
+      "prazo_entrega": "2 dias",
+      "localizacao": "Curitibanos"
+    },
+    {
+      "categoria": "Produtos para Lavoura",
+      "descricao": "Metarex",
+      "fornecedor": "Diamaju",
+      "preco": 61.60,
+      "prazo_entrega": "2 dias",
+      "localizacao": "Curitibanos"
+    },
+    {
+      "categoria": "Produtos para Lavoura",
+      "descricao": "Nitrobras",
+      "fornecedor": "Diamaju",
+      "preco": 11.22,
+      "prazo_entrega": "2 dias",
+      "localizacao": "Curitibanos"
+    },
+    {
+      "categoria": "Produtos para Lavoura",
+      "descricao": "Regador 10L",
+      "fornecedor": "Basso e Pancotte",
+      "preco": 13.03,
+      "prazo_entrega": "3 dias",
+      "localizacao": "Nova Alvorada"
+    },
+    {
+      "categoria": "Sais Minerais",
+      "descricao": "Vacci phos 40",
+      "fornecedor": "Vaccinar",
+      "preco": 66.28,
+      "prazo_entrega": "45 dias",
+      "localizacao": "Pinhais"
+    },
+    {
+      "categoria": "Sais Minerais",
+      "descricao": "Vacci phos 60ADE leite",
+      "fornecedor": "Vaccinar",
+      "preco": 98.50,
+      "prazo_entrega": "45 dias",
+      "localizacao": "Pinhais"
+    },
+    {
+      "categoria": "Sais Minerais",
+      "descricao": "Bovimaster bezerro",
+      "fornecedor": "Vaccinar",
+      "preco": 89.36,
+      "prazo_entrega": "45 dias",
+      "localizacao": "Pinhais"
+    },
+    {
+      "categoria": "Medicamentos",
+      "descricao": "Antitóxico 100ml",
+      "fornecedor": "Vetminas",
+      "preco": 15.41,
+      "prazo_entrega": "20 dias",
+      "localizacao": "São Paulo"
+    },
+    {
+      "categoria": "Medicamentos",
+      "descricao": "Babecid 30ml",
+      "fornecedor": "Vetminas",
+      "preco": 11.21,
+      "prazo_entrega": "20 dias",
+      "localizacao": "São Paulo"
+    },
+    {
+      "categoria": "Medicamentos",
+      "descricao": "Terramicina 50ml",
+      "fornecedor": "Vetminas",
+      "preco": 14.22,
+      "prazo_entrega": "20 dias",
+      "localizacao": "São Paulo"
+    },
+    {
+      "categoria": "Medicamentos",
+      "descricao": "D-500 50ml",
+      "fornecedor": "Vetminas",
+      "preco": 16.10,
+      "prazo_entrega": "20 dias",
+      "localizacao": "São Paulo"
+    },
+    {
+      "categoria": "Vitaminas Pet",
+      "descricao": "Munnomax 50g",
+      "fornecedor": "agro veterinária Timbó",
+      "preco": 44.70,
+      "prazo_entrega": "15 dias",
+      "localizacao": "Timbó"
+    },
+    {
+      "categoria": "Vitaminas Pet",
+      "descricao": "Glutamina 30ml",
+      "fornecedor": "agro veterinária Timbó",
+      "preco": 18.75,
+      "prazo_entrega": "15 dias",
+      "localizacao": "Timbó"
+    },
+    {
+      "categoria": "Proteção Individual",
+      "descricao": "Bota ultraleve",
+      "fornecedor": "Basso e Pancotte",
+      "preco": 60.65,
+      "prazo_entrega": "3 dias",
+      "localizacao": "Nova Alvorada"
+    },
+    {
+      "categoria": "Proteção Individual",
+      "descricao": "Capa de chuva",
+      "fornecedor": "Basso e Pancotte",
+      "preco": 12.33,
+      "prazo_entrega": "3 dias",
+      "localizacao": "Nova Alvorada"
+    }
+  ]

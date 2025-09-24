@@ -1,0 +1,134 @@
+// ===== FILTERSIDEBAR COMPONENT - BEM =====
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+// ===== OVERLAY =====
+.filter-sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+// ===== FILTER SIDEBAR =====
+.filter-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  max-width: 400px;
+  height: 100vh;
+  background: var(--white-pure);
+  z-index: 1000;
+  transition: right 0.3s ease-out;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  
+  // ===== ESTADO ABERTO =====
+  &--open {
+    right: 0;
+  }
+  
+  // ===== ELEMENTOS =====
+  
+  // Header do sidebar mobile
+  &__header {
+    padding: 1.5rem 1.25rem 1rem;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    background: var(--bg-primary);
+  }
+  
+  &__header-title {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    
+    i {
+      color: var(--accent-primary);
+    }
+  }
+  
+  &__close-btn {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    border-radius: 0.375rem;
+    
+    &:hover {
+      background: var(--bg-secondary);
+      color: var(--accent-primary);
+    }
+    
+    i {
+      font-size: 1.25rem;
+    }
+  }
+  
+  // Conteúdo scrollável
+  &__content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem 1.25rem;
+    
+    // Customizar scrollbar
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: var(--bg-primary);
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: var(--border-medium);
+      border-radius: 3px;
+      
+      &:hover {
+        background: var(--accent-primary);
+      }
+    }
+  }
+}
+
+// ===== ANIMAÇÕES =====
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// ===== RESPONSIVIDADE =====
+@media (max-width: 480px) {
+  .filter-sidebar {
+    width: 90%;
+    max-width: none;
+  }
+}
+
+// ===== CLASSES DE VISIBILIDADE =====
+// Filter sidebar só aparece em dispositivos móveis
+@media (min-width: 992px) {
+  .filter-sidebar,
+  .filter-sidebar-overlay {
+    display: none !important;
+  }
+}

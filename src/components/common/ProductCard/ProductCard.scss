@@ -1,0 +1,367 @@
+// ===== PRODUCTCARD COMPONENT - BEM =====
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+// ===== BASE COMPONENT =====
+.product-card {
+  // Card branco sobre fundo beige para máximo contraste
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  box-shadow: var(--card-shadow) !important;
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+  height: 100% !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  position: relative !important;
+
+  // Hover elegante com elevação
+  &:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: var(--card-shadow-hover) !important;
+    border-color: var(--accent-primary) !important;
+  }
+
+  &__wrapper {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: var(--card-bg) !important; // Branco puro para contraste
+    border: 1px solid var(--card-border); // Borda beige sutil
+    box-shadow: var(--card-shadow);
+    border-radius: 1rem; // Bordas modernas
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+
+    // Bordinha interna sutil
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 1.125rem;
+      border: 1px solid var(--light-2);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    &:hover {
+      transform: translateY(-6px); // Hover mais suave
+      box-shadow: var(--card-shadow-hover);
+      border-color: var(--dark-2); // Verde médio no hover
+      
+      &::before {
+        border-color: var(--dark-2); // Bordinha interna verde no hover
+      }
+    }
+  }
+
+  &__image {
+    &-container {
+      height: 140px; // Reduzido ainda mais para cards micro-compactos
+      background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    &-main {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    &-overlay {
+      background: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      transition: all 0.3s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    padding: 0.75rem 0.875rem 0.875rem; // Padding ainda mais reduzido
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 140px); // Ajustado para nova altura da imagem
+    min-height: 160px; // Altura mínima ainda menor
+    flex-grow: 1;
+  }
+
+  &__category {
+    &-badge {
+      background-color: var(--bg-secondary); // Fundo beige restaurado
+      color: var(--accent-primary); // Texto verde para contraste
+      border: 1px solid var(--border-light); // Borda beige sutil
+      font-weight: 600;
+      font-size: 0.7rem; // Menor para cards compactos
+      padding: 0.25rem 0.75rem; // Padding reduzido
+      border-radius: 0.875rem;
+      display: inline-block;
+      margin-bottom: 0.5rem; // Margem reduzida
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  &__title {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 0.85rem; // Ainda menor para cards micro-compactos
+    line-height: 1.2;
+    margin-bottom: 0.25rem; // Margem mínima
+    height: 2rem; // Altura fixa bem pequena
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    letter-spacing: -0.1px;
+  }
+
+  &__description {
+    color: var(--text-secondary);
+    font-size: 0.7rem; // Ainda menor para cards micro-compactos
+    line-height: 1.2;
+    margin-bottom: 0.375rem; // Margem mínima
+    height: 1.7rem; // Altura fixa bem pequena
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: 500;
+  }
+
+  &__footer {
+    margin-top: auto;
+  }
+
+  &__price {
+    &-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+
+    &-current {
+      color: var(--orange-accent); // Laranja para destaque do preço
+      font-weight: 800; // Extra bold para preços
+      font-size: 1.25rem; // Maior para destaque
+      text-shadow: 0 1px 2px rgba(191, 61, 16, 0.15); // Sombra sutil laranja
+    }
+
+    &-old {
+      color: var(--dark-3);
+      text-decoration: line-through;
+      font-size: 0.875rem;
+      margin-left: 0.5rem;
+      opacity: 0.6;
+    }
+  }
+
+  &__rating {
+    &-container {
+      display: flex;
+      align-items: center;
+    }
+
+    &-stars {
+      color: #fbbf24;
+      margin-right: 0.25rem;
+    }
+
+    &-text {
+      color: #718096;
+      font-size: 0.875rem;
+    }
+  }
+
+  &__status {
+    &-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0.75rem;
+    }
+
+    &-badge {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 0.5rem;
+      border: 1px solid;
+
+      &--available {
+        background-color: var(--bg-secondary); // Fundo beige suave
+        color: var(--success); // Verde sucesso
+        border-color: var(--border-light); // Borda beige
+        font-weight: 600;
+      }
+
+      &--unavailable {
+        background-color: var(--bg-tertiary); // Fundo beige mais escuro
+        color: var(--text-muted); // Texto neutro
+        border-color: var(--border-medium);
+        font-weight: 600;
+      }
+
+      &--limited {
+        background-color: var(--bg-secondary); // Fundo beige
+        color: var(--warning); // Laranja para aviso
+        border-color: var(--border-light);
+        font-weight: 600;
+      }
+    }
+  }
+
+  // ===== HOVER EFFECTS =====
+  &__wrapper:hover {
+    .product-card__image-main {
+      transform: scale(1.05);
+    }
+
+    .product-card__image-overlay {
+      opacity: 1;
+    }
+  }
+
+  // ===== VARIANTES TEMÁTICAS =====
+  
+  // Light Theme (contextos claros - beige)
+  &--light-theme {
+    .product-card__wrapper {
+      background: #ffffff;
+      border-color: #f0e6d1;
+
+      &:hover {
+        border-color: #165329;
+        box-shadow: 0 8px 24px rgba(22, 83, 41, 0.15);
+      }
+    }
+
+    .product-card__title {
+      color: #0f3d1f;
+    }
+
+    .product-card__description {
+      color: #2d5a3d;
+    }
+  }
+
+  // Dark Theme (seção de produtos - fundo escuro)
+  &--dark-theme {
+    .product-card__wrapper {
+      background: #ffffff;
+      border-color: #e0e0e0;
+
+      &:hover {
+        border-color: #ff6b35;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    .product-card__title {
+      color: #2d3748;
+    }
+
+    .product-card__description {
+      color: #718096;
+    }
+  }
+
+  // Featured variant
+  &--featured {
+    .product-card__wrapper {
+      border: 2px solid #ff6b35;
+      box-shadow: 0 4px 16px rgba(255, 107, 53, 0.2);
+    }
+
+    .product-card__category-badge {
+      background: linear-gradient(45deg, #ff6b35, #ff8a50);
+      color: #ffffff;
+      border: none;
+    }
+  }
+
+  // Promoted variant
+  &--promoted {
+    .product-card__wrapper {
+      position: relative;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #165329, #ff6b35);
+        z-index: 1;
+      }
+    }
+  }
+}
+
+// ===== QUICK ACTIONS =====
+.quick-actions {
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+
+  .product-card__wrapper:hover & {
+    transform: translateY(0);
+  }
+}
+
+// ===== RESPONSIVIDADE =====
+@media (max-width: 768px) {
+  .product-card {
+    &__image-container {
+      height: 180px;
+    }
+
+    &__content {
+      padding: 1rem;
+      height: calc(100% - 180px);
+    }
+
+    &__title {
+      font-size: 0.875rem;
+      min-height: 2rem;
+    }
+
+    &__description {
+      font-size: 0.8125rem;
+    }
+
+    &__price-current {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .product-card {
+    &__image-container {
+      height: 160px;
+    }
+
+    &__content {
+      padding: 0.875rem;
+      height: calc(100% - 160px);
+    }
+
+    &__title {
+      font-size: 0.8125rem;
+      min-height: 1.75rem;
+    }
+  }
+}

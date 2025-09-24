@@ -1,0 +1,678 @@
+// ===============================================
+// MAIN SCSS - AGROVALE
+// ===============================================
+
+// Importações SCSS organizadas
+@import './variables.scss';
+@import './mixins.scss';
+@import './utilities.scss';
+@import './components.scss';
+
+// ===============================================
+// Sistema de Cores AGROVALE - Predominância Beige Original Restaurada
+:root {
+  // ===== TONS BEIGE PRINCIPAIS (Fundo Predominante) =====
+  --bg-primary: #f8f5e8;         // Beige claro principal - Background geral
+  --bg-secondary: #f0e6d1;       // Beige médio - Cards e seções
+  --bg-tertiary: #e8dcc0;        // Beige escuro - Elementos secundários
+  
+  // ===== TONS VERDE AGROPECUÁRIO =====
+  --accent-primary: #22543d;      // Verde principal - Botões e links
+  --accent-secondary: #2d7748;    // Verde médio - Acentos
+  --accent-light: #38a169;        // Verde claro - Highlights
+  --accent-hover: #1a3d2e;        // Verde escuro - Hover states
+  
+  // ===== TONS PARA TEXTO =====
+  --text-primary: #2d3748;        // Texto principal escuro
+  --text-secondary: #4a5568;      // Texto secundário
+  --text-muted: #718096;          // Texto discreto
+  --text-accent: #22543d;         // Texto com destaque verde
+  
+  // ===== CORES COMPLEMENTARES =====
+  --orange-accent: #bf7900;       // Laranja para preços e destaques
+  --white-pure: #ffffff;          // Branco puro para cards
+  --white-soft: #fefefe;          // Branco suave para contraste
+  
+  // ===== CORES DE STATUS =====
+  --success: #2d7a47;            // Verde sucesso
+  --warning: #bf7900;            // Laranja/amarelo para avisos
+  --danger: #e53e3e;             // Vermelho para erros
+  --info: #3182ce;               // Azul para informações
+  
+  // ===== SOMBRAS BEIGE (suaves e elegantes) =====
+  --shadow-sm: 0 2px 4px rgba(45, 55, 72, 0.1);
+  --shadow-md: 0 4px 8px rgba(45, 55, 72, 0.12);
+  --shadow-lg: 0 8px 16px rgba(45, 55, 72, 0.15);
+  --shadow-xl: 0 12px 24px rgba(45, 55, 72, 0.18);
+
+  // ===== SISTEMA DE CARDS BEIGE =====
+  --card-bg: #ffffff;             // Cards sempre brancos para contraste
+  --card-border: #e8dcc0;         // Bordas beige suaves
+  --card-shadow: 0 4px 12px rgba(45, 55, 72, 0.1);
+  --card-shadow-hover: 0 8px 20px rgba(45, 55, 72, 0.15);
+  
+  // ===== BORDAS E ELEMENTOS SUTIS =====
+  --border-light: #e8dcc0;        // Bordas beige claras
+  --border-medium: #ddd1b8;       // Bordas beige médias  
+  --border-dark: #d4c5a0;         // Bordas beige escuras
+}
+
+// Reset e estilos globais
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+// ===== BACKGROUNDS BEIGE RESTAURADOS =====
+.bg-primary {
+  background-color: var(--bg-primary) !important;  // Beige claro
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary) !important;  // Beige médio
+}
+
+.bg-tertiary {
+  background-color: var(--bg-tertiary) !important;  // Beige escuro
+}
+
+// Classes de compatibilidade (mantidas para não quebrar código existente)
+.bg-dark-custom {
+  background-color: var(--bg-secondary) !important;  // Beige médio
+}
+
+.bg-darker {
+  background-color: var(--bg-tertiary) !important;  // Beige escuro
+}
+
+// ===== SISTEMA DE CARDS BEIGE ATUALIZADO =====
+.card, .product-card, [class*="card"] {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  box-shadow: var(--card-shadow) !important;
+  border-radius: 1rem !important;
+  transition: all 0.3s ease !important;
+  
+  &:hover {
+    box-shadow: var(--card-shadow-hover) !important;
+    transform: translateY(-2px) !important;
+  }
+}
+
+// Card especificamente para produtos
+.product-card {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  border-radius: 1rem !important;
+}
+
+.bg-accent {
+  background-color: var(--accent-primary) !important;
+}
+
+// ===== CLASSES DE TEXTO BEIGE RESTAURADAS =====
+.text-primary {
+  color: var(--text-primary) !important;  // Texto principal escuro
+}
+
+.text-secondary {
+  color: var(--text-secondary) !important;  // Texto secundário
+}
+
+.text-muted {
+  color: var(--text-muted) !important;  // Texto discreto
+}
+
+// Classes de compatibilidade (mantendo funcionamento anterior)
+.text-primary-custom {
+  color: var(--text-accent) !important;  // Verde para logo e elementos principais
+}
+
+.text-secondary-custom {
+  color: var(--text-secondary) !important;  // Texto secundário
+}
+
+.text-accent {
+  color: var(--accent-primary) !important;  // Verde para acentos
+}
+
+// ===== CLASSES PARA TEXTO CLARO (Carrossel e elementos sobre fundos escuros) =====
+.text-light-1 {
+  color: var(--light-1) !important;  /* Texto mais claro - títulos principais */
+}
+
+.text-light-2 {
+  color: var(--light-2) !important;  /* Texto médio - subtítulos */
+}
+
+.text-light-3 {
+  color: var(--light-3) !important;  /* Texto mais escuro - textos secundários */
+}
+
+// Classes de compatibilidade - TEXTO BEIGE LEGÍVEL
+.text-beige {
+  color: var(--bg-primary) !important; // Beige claro para máxima legibilidade
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important; // Sombra forte
+}
+
+.text-white {
+  color: var(--white-pure) !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5) !important;
+}
+
+// ===== BOTÕES BEIGE RESTAURADOS =====
+.btn-accent {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: var(--white-pure);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  
+  &:hover {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(34, 84, 61, 0.3);
+    color: var(--white-pure);
+  }
+  
+  &:focus {
+    background-color: var(--accent-primary);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 0.2rem rgba(34, 84, 61, 0.25);
+    color: var(--white-pure);
+  }
+}
+
+// ===== BOTÕES LARANJAS (SEM VERDE) =====
+.btn-primary, .btn-warning, .btn[class*="orange"], [class*="btn-orange"] {
+  background-color: var(--orange-accent) !important;
+  border-color: var(--orange-accent) !important;
+  color: var(--white-pure) !important;
+  transition: all 0.3s ease !important;
+  
+  &:hover {
+    background-color: #bf3d10 !important; // Laranja vibrante e intenso
+    border-color: #bf3d10 !important;
+    color: var(--white-pure) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(191, 61, 16, 0.4) !important;
+    // Remove qualquer cor verde
+    --bs-btn-hover-bg: #bf3d10 !important;
+    --bs-btn-hover-border-color: #bf3d10 !important;
+  }
+  
+  &:focus {
+    background-color: var(--orange-accent) !important;
+    border-color: var(--orange-accent) !important;
+    color: var(--white-pure) !important;
+    box-shadow: 0 0 0 0.2rem rgba(191, 61, 16, 0.25) !important;
+    // Remove qualquer cor verde
+    --bs-btn-focus-box-shadow: 0 0 0 0.2rem rgba(191, 61, 16, 0.25) !important;
+  }
+  
+  &:active {
+    background-color: #a6330e !important; // Laranja mais escuro baseado na nova cor
+    border-color: #a6330e !important;
+    color: var(--white-pure) !important;
+    // Remove qualquer cor verde
+    --bs-btn-active-bg: #a6330e !important;
+    --bs-btn-active-border-color: #a6330e !important;
+  }
+}
+
+// ===== CORREÇÃO: BTN-ACCENT EM BOTÕES DE AÇÃO PRINCIPAIS (LARANJA) =====
+// Sobrescrever btn-accent quando usado em contextos que devem ser laranja
+.action-buttons .btn-accent,
+.promotional-btn.btn-accent,
+.cta-buttons .btn-accent,
+.slide-actions .btn-accent,
+.slide-actions-mobile .btn-accent,
+.promotions-carousel__card-image-overlay .btn-accent,
+.input-text__button.btn-accent {
+  background-color: var(--orange-accent) !important;
+  border-color: var(--orange-accent) !important;
+  color: var(--white-pure) !important;
+  transition: all 0.3s ease !important;
+  
+  &:hover {
+    background-color: #bf3d10 !important;
+    border-color: #bf3d10 !important;
+    color: var(--white-pure) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(191, 61, 16, 0.4) !important;
+    --bs-btn-hover-bg: #bf3d10 !important;
+    --bs-btn-hover-border-color: #bf3d10 !important;
+  }
+  
+  &:focus {
+    background-color: var(--orange-accent) !important;
+    border-color: var(--orange-accent) !important;
+    color: var(--white-pure) !important;
+    box-shadow: 0 0 0 0.2rem rgba(191, 61, 16, 0.25) !important;
+    --bs-btn-focus-box-shadow: 0 0 0 0.2rem rgba(191, 61, 16, 0.25) !important;
+  }
+  
+  &:active {
+    background-color: #a6330e !important;
+    border-color: #a6330e !important;
+    color: var(--white-pure) !important;
+    --bs-btn-active-bg: #a6330e !important;
+    --bs-btn-active-border-color: #a6330e !important;
+  }
+}
+
+.btn-outline-accent {
+  background-color: transparent !important;
+  border: 2px solid var(--accent-primary) !important;
+  color: var(--accent-primary) !important;
+  transition: all 0.3s ease !important;
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
+  
+  &:hover {
+    background-color: var(--accent-primary) !important;
+    border-color: var(--accent-primary) !important;
+    color: var(--white-pure) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(34, 84, 61, 0.25);
+    --bs-btn-hover-bg: var(--accent-primary) !important;
+    --bs-btn-hover-border-color: var(--accent-primary) !important;
+    --bs-btn-hover-color: var(--white-pure) !important;
+    
+    i {
+      color: var(--white-pure) !important;
+    }
+  }
+  
+  &:focus {
+    background-color: var(--accent-primary) !important;
+    border-color: var(--accent-primary) !important;
+    color: var(--white-pure) !important;
+    box-shadow: 0 0 0 0.2rem rgba(34, 84, 61, 0.25) !important;
+    --bs-btn-focus-box-shadow: 0 0 0 0.2rem rgba(34, 84, 61, 0.25) !important;
+    
+    i {
+      color: var(--white-pure) !important;
+    }
+  }
+  
+  &:active {
+    background-color: var(--accent-hover) !important;
+    border-color: var(--accent-hover) !important;
+    color: var(--white-pure) !important;
+    transform: translateY(0);
+    --bs-btn-active-bg: var(--accent-hover) !important;
+    --bs-btn-active-border-color: var(--accent-hover) !important;
+  }
+
+  // ===== ESTILO IGUAL AO SELECT (BEIGE + TEXTO VERDE) PARA BOTÃO DE FILTROS MOBILE =====
+  &.desktop-hidden {
+    background-color: var(--bg-tertiary) !important; // Mesmo background do bg-darker
+    border: 1px solid var(--border-medium) !important; // Borda mais sutil
+    color: var(--text-accent) !important; // Mesmo texto verde do select
+    border-radius: 0.5rem; // Bordas mais sutis como o select
+    box-shadow: 0 2px 6px rgba(45, 55, 72, 0.08);
+    font-weight: 600;
+    transition: all 0.3s ease !important;
+    
+    i {
+      color: var(--text-accent) !important; // Ícone verde também
+    }
+    
+    &:hover {
+      background-color: var(--bg-secondary) !important; // Beige mais claro no hover
+      border-color: var(--accent-primary) !important; // Borda verde no hover
+      color: var(--accent-primary) !important; // Texto verde mais intenso
+      box-shadow: 0 4px 12px rgba(34, 84, 61, 0.15);
+      transform: translateY(-2px);
+      --bs-btn-hover-bg: var(--bg-secondary) !important;
+      --bs-btn-hover-border-color: var(--accent-primary) !important;
+      --bs-btn-hover-color: var(--accent-primary) !important;
+      
+      i {
+        color: var(--accent-primary) !important;
+      }
+    }
+    
+    &:focus {
+      background-color: var(--bg-tertiary) !important;
+      border-color: var(--accent-primary) !important;
+      color: var(--accent-primary) !important;
+      box-shadow: 0 0 0 3px rgba(34, 84, 61, 0.2) !important;
+      --bs-btn-focus-box-shadow: 0 0 0 3px rgba(34, 84, 61, 0.2) !important;
+      
+      i {
+        color: var(--accent-primary) !important;
+      }
+    }
+    
+    &:active {
+      background-color: var(--bg-tertiary) !important;
+      border-color: var(--accent-hover) !important;
+      color: var(--accent-hover) !important;
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(45, 55, 72, 0.1);
+      --bs-btn-active-bg: var(--bg-tertiary) !important;
+      --bs-btn-active-border-color: var(--accent-hover) !important;
+      
+      i {
+        color: var(--accent-hover) !important;
+      }
+    }
+  }
+}
+
+// ===== ESTILO CONSISTENTE PARA SELECT DE ORDENAÇÃO =====
+.form-select.bg-darker.text-primary-custom {
+  background-color: var(--bg-tertiary) !important;
+  border: 1px solid var(--border-medium) !important;
+  color: var(--text-accent) !important;
+  border-radius: 0.5rem !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  padding: 0.875rem 1.5rem !important; // Mesmo padding do botão
+  min-width: 140px !important;
+  box-shadow: 0 2px 6px rgba(45, 55, 72, 0.08) !important;
+  transition: all 0.3s ease !important;
+  
+  // Ícone dropdown personalizado
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%2322543d' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0.75rem center !important;
+  background-size: 16px 12px !important;
+  
+  &:hover {
+    background-color: var(--bg-secondary) !important;
+    border-color: var(--accent-primary) !important;
+    color: var(--accent-primary) !important;
+    box-shadow: 0 4px 12px rgba(34, 84, 61, 0.15) !important;
+    // Removido transform: translateY(-2px) que estava causando problemas no dropdown
+  }
+  
+  &:focus {
+    background-color: var(--bg-tertiary) !important;
+    border-color: var(--accent-primary) !important;
+    color: var(--accent-primary) !important;
+    box-shadow: 0 0 0 3px rgba(34, 84, 61, 0.2) !important;
+    outline: none !important;
+  }
+  
+  &:active {
+    background-color: var(--bg-tertiary) !important;
+    border-color: var(--accent-hover) !important;
+    color: var(--accent-hover) !important;
+    // Removido transform: translateY(0) para manter consistência
+  }
+}
+
+// ===== CORREÇÃO COMPLETA PARA DROPDOWN DO SELECT =====
+// Reset completo de posicionamento para evitar interferências
+.section-header__actions,
+.sort-controls,
+.form-select.bg-darker.text-primary-custom {
+  position: static !important;
+  transform: none !important;
+  z-index: auto !important;
+}
+
+// Garantir que containers pais não interfiram
+.section-header,
+.section-header__content,
+.section-header__actions {
+  overflow: visible !important;
+  contain: none !important;
+  isolation: auto !important;
+}
+
+// Estilo específico para o dropdown
+.form-select.bg-darker.text-primary-custom {
+  // Garantir que o select tenha comportamento nativo
+  -webkit-appearance: menulist !important;
+  -moz-appearance: menulist !important;
+  appearance: auto !important;
+  
+  // Remover custom background apenas durante o dropdown
+  &:focus,
+  &:active {
+    background-image: none !important;
+  }
+}
+
+// ===== CARDS COM NOVO SISTEMA HIERÁRQUICO =====
+.card-light-1 {
+  background-color: var(--light-1);
+  border: 1px solid var(--light-3);
+  color: var(--dark-1);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(15, 61, 31, 0.1);
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(15, 61, 31, 0.15);
+    border-color: var(--accent-primary);
+  }
+}
+
+.card-light-2 {
+  background-color: var(--light-2);
+  border: 1px solid var(--light-3);
+  color: var(--dark-1);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(15, 61, 31, 0.1);
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(15, 61, 31, 0.15);
+    border-color: var(--accent-primary);
+  }
+}
+
+.card-light-3 {
+  background-color: var(--light-3);
+  border: 1px solid var(--dark-3);
+  color: var(--dark-1);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(15, 61, 31, 0.1);
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(15, 61, 31, 0.15);
+    border-color: var(--accent-primary);
+  }
+}
+
+// Classe de compatibilidade
+.card-dark {
+  background-color: var(--light-2);
+  border: 1px solid var(--light-3);
+  color: var(--dark-1);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(15, 61, 31, 0.1);
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(15, 61, 31, 0.15);
+    border-color: var(--accent-primary);
+  }
+}
+
+// Estilo para scrollbar personalizada
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
+
+// ===== CLASSES UTILITÁRIAS PARA BORDAS =====
+.border-light-1 {
+  border-color: var(--light-1) !important;
+}
+
+.border-light-2 {
+  border-color: var(--light-2) !important;
+}
+
+.border-light-3 {
+  border-color: var(--light-3) !important;
+}
+
+.border-dark-1 {
+  border-color: var(--dark-1) !important;
+}
+
+.border-dark-2 {
+  border-color: var(--dark-2) !important;
+}
+
+.border-dark-3 {
+  border-color: var(--dark-3) !important;
+}
+
+.border-accent {
+  border-color: var(--accent-primary) !important;
+}
+
+.bg-pastel-green {
+  background-color: var(--pastel-green) !important;
+}
+
+.bg-pastel-sage {
+  background-color: var(--pastel-sage) !important;
+}
+
+.bg-pastel-mint {
+  background-color: var(--pastel-mint) !important;
+}
+
+.bg-pastel-cream {
+  background-color: var(--pastel-cream) !important;
+}
+
+.text-success-custom {
+  color: var(--success) !important;
+}
+
+.text-warning-custom {
+  color: var(--warning) !important;
+}
+
+.text-danger-custom {
+  color: var(--danger) !important;
+}
+
+.text-info-custom {
+  color: var(--info) !important;
+}
+
+// ===== FORMULÁRIOS BEIGE RESTAURADOS =====
+.form-control {
+  background-color: var(--white-pure);
+  border: 1px solid var(--border-light);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1rem;
+  
+  &:focus {
+    background-color: var(--white-pure);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 0.2rem rgba(34, 84, 61, 0.15);
+    color: var(--text-primary);
+  }
+  
+  &::placeholder {
+    color: var(--text-muted);
+    opacity: 0.8;
+  }
+}
+
+.form-select {
+  background-color: var(--white-pure);
+  border: 1px solid var(--border-light);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  
+  &:focus {
+    background-color: var(--white-pure);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 0.2rem rgba(34, 84, 61, 0.15);
+    color: var(--text-primary);
+  }
+}
+
+.form-check-input {
+  background-color: var(--white-pure);
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+  
+  &:focus {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 0.2rem rgba(34, 84, 61, 0.15);
+  }
+  
+  &:checked {
+    background-color: var(--accent-primary);
+    border-color: var(--accent-primary);
+  }
+}
+
+// Animações
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+// Utilitários responsivos
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .desktop-hidden {
+    display: none !important;
+  }
+}
+

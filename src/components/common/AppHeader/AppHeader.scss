@@ -1,0 +1,178 @@
+// ===== APPHEADER COMPONENT - BEM =====
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+// ===== BASE COMPONENT =====
+.app-header {
+  background: var(--bg-secondary) !important; // Beige fixo sempre
+  backdrop-filter: none; // Remover blur para fundo sólido
+  border-bottom: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+  
+  // Header fixo
+  &--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  // ===== ELEMENTOS =====
+  
+  // Logo/Brand
+  &__brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--accent-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: var(--dark-2);
+    }
+  }
+  
+  // Navegação
+  &__nav {
+    .navbar-nav {
+      .nav-link {
+        color: var(--accent-primary);
+        font-weight: 500;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          background: var(--light-3);
+          color: var(--dark-1);
+        }
+        
+        &.active {
+          background: var(--accent-primary);
+          color: var(--white-contrast);
+        }
+      }
+    }
+  }
+  
+  // Container de busca
+  &__search {
+    max-width: 400px;
+    width: 100%;
+    
+    @media (max-width: 991px) {
+      max-width: 100%;
+      margin-top: 1rem;
+    }
+  }
+  
+  // Ações (carrinho, perfil, etc)
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  // Botões de ação
+  &__action-btn {
+    background: transparent;
+    border: 2px solid var(--accent-primary);
+    color: var(--accent-primary);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: var(--accent-primary);
+      color: var(--white-contrast);
+      transform: translateY(-2px);
+    }
+    
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(22, 83, 49, 0.25);
+    }
+  }
+  
+  // Badge de contador (carrinho)
+  &__badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--orange-accent);
+    color: var(--white-contrast);
+    font-size: 0.75rem;
+    font-weight: 700;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--white-contrast);
+  }
+  
+  // ===== RESPONSIVIDADE =====
+  @media (max-width: 991px) {
+    &__search {
+      order: 3;
+      width: 100%;
+    }
+    
+    &__actions {
+      gap: 0.5rem;
+    }
+    
+    &__action-btn {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .container-fluid {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    &__brand {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+// ===== NAVEGAÇÃO MOBILE =====
+.navbar-collapse {
+  background: var(--light-1);
+  border-radius: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--light-3);
+  
+  @media (min-width: 992px) {
+    background: transparent;
+    border: none;
+    margin-top: 0;
+    padding: 0;
+  }
+}
+
+// ===== ANIMAÇÕES =====
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app-header {
+  animation: slideDown 0.3s ease-out;
+}

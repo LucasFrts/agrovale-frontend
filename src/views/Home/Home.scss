@@ -1,0 +1,224 @@
+// ===============================================
+// HOME PAGE STYLES - AGROVALE
+// ===============================================
+
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+// ===============================================
+// HOME PAGE LAYOUT
+// ===============================================
+
+.home-page {
+  min-height: 100vh;
+  background: $gradient-primary;
+
+  &__hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__products-section {
+    background: linear-gradient(180deg, transparent, $bg-secondary);
+    @include section-spacing;
+  }
+}
+
+// ===============================================
+// PRODUCTS SECTION
+// ===============================================
+
+.products-section {
+  &__container {
+    @include container-padding;
+  }
+
+  &__sidebar-col {
+    @include mobile-only {
+      display: none;
+    }
+  }
+
+  &__main-col {
+    padding-left: $spacing-md;
+
+    @include mobile-only {
+      padding-left: 0;
+    }
+  }
+}
+
+// ===============================================
+// SECTION HEADER STYLES
+// ===============================================
+
+.section-header {
+  @include card-base;
+  padding: $spacing-xl;
+  margin-bottom: $spacing-xl;
+  border: 1px solid $bg-tertiary;
+
+  @include mobile-only {
+    padding: $spacing-lg;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__title {
+    @include heading-base;
+    font-size: $font-size-3xl;
+    margin-bottom: $spacing-sm;
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+
+    @include mobile-only {
+      font-size: $font-size-2xl;
+    }
+
+    .section-header__icon {
+      @include text-accent;
+    }
+  }
+
+  &__description {
+    @include text-secondary;
+    margin-bottom: 0;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: $spacing-md;
+
+    @include mobile-only {
+      justify-content: center;
+      margin-top: $spacing-lg;
+    }
+  }
+}
+
+// ===============================================
+// SORT CONTROLS
+// ===============================================
+
+.sort-controls {
+  max-width: 200px;
+
+  .form-select {
+    background-color: $bg-darker;
+    border-color: $bg-tertiary;
+    @include text-primary;
+
+    &:focus {
+      border-color: $color-accent-primary;
+      box-shadow: 0 0 0 0.2rem rgba($color-accent-primary, 0.25);
+    }
+  }
+}
+
+// ===============================================
+// PRODUCTS CONTAINER
+// ===============================================
+
+.products-container {
+  &__header {
+    margin-bottom: $spacing-xl;
+
+    @include mobile-only {
+      margin-bottom: $spacing-lg;
+    }
+  }
+
+  &__grid {
+    @include fade-in-up;
+  }
+
+  &__pagination {
+    margin-top: $spacing-xl;
+    display: flex;
+    justify-content: center;
+
+    @include mobile-only {
+      margin-top: $spacing-lg;
+    }
+  }
+}
+
+// ===============================================
+// PAGINATION STYLES
+// ===============================================
+
+.pagination {
+  .page-link {
+    background-color: $bg-secondary;
+    border-color: $bg-tertiary;
+    @include text-primary;
+
+    &:hover {
+      background-color: $bg-tertiary;
+      border-color: $color-accent-primary;
+      @include text-primary;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba($color-accent-primary, 0.25);
+    }
+  }
+
+  .page-item.active .page-link {
+    background-color: $color-accent-primary;
+    border-color: $color-accent-primary;
+  }
+
+  .page-item.disabled .page-link {
+    background-color: $bg-darker;
+    border-color: $bg-tertiary;
+    color: $color-text-muted;
+  }
+}
+
+// ===============================================
+// RESPONSIVE ADJUSTMENTS
+// ===============================================
+
+@include mobile-only {
+  .products-container {
+    padding: 0 $spacing-sm;
+
+    &__header .row {
+      text-align: center;
+    }
+  }
+
+  .sort-controls {
+    max-width: none;
+    width: 100%;
+    margin-top: $spacing-md;
+
+    .form-select {
+      width: 100%;
+    }
+  }
+
+  .pagination {
+    font-size: $font-size-sm;
+
+    .page-link {
+      padding: $spacing-sm $spacing-md;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .products-container {
+    :deep(.col-sm-6) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+  .pagination .page-link {
+    padding: $spacing-xs $spacing-sm;
+    font-size: $font-size-xs;
+  }
+}

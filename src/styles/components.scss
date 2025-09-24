@@ -1,0 +1,468 @@
+// ===============================================
+// COMPONENTES BASE - AGROVALE
+// ===============================================
+
+@import './variables.scss';
+@import './mixins.scss';
+
+// ===============================================
+// PRODUCT CARD COMPONENT (BEM)
+// ===============================================
+
+.product-card {
+  @include card-base;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    @include card-hover;
+  }
+
+  // Elements
+  &__image-container {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    
+    @include mobile-only {
+      height: 180px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform $transition-base;
+
+    .product-card:hover & {
+      transform: scale(1.05);
+    }
+  }
+
+  &__overlay {
+    @include overlay;
+    background: rgba($bg-primary, 0.7);
+    opacity: 0;
+    transition: opacity $transition-base;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .product-card:hover & {
+      opacity: 1;
+    }
+
+    @include mobile-only {
+      opacity: 1;
+      background: rgba($bg-primary, 0.4);
+    }
+  }
+
+  &__content {
+    padding: $spacing-lg;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    @include mobile-only {
+      padding: $spacing-md;
+    }
+  }
+
+  &__category {
+    margin-bottom: $spacing-sm;
+  }
+
+  &__title {
+    @include heading-base;
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-sm;
+    min-height: 2.5rem;
+    @include text-truncate(2);
+
+    @include mobile-only {
+      font-size: $font-size-base;
+    }
+  }
+
+  &__description {
+    @include text-secondary;
+    margin-bottom: $spacing-lg;
+    flex-grow: 1;
+    line-height: $line-height-normal;
+    @include text-truncate(3);
+  }
+
+  &__footer {
+    margin-top: auto;
+  }
+
+  &__price {
+    margin-bottom: $spacing-md;
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacing-sm;
+  }
+
+  // Modifiers
+  &--featured {
+    border: 2px solid $color-accent-primary;
+    
+    .product-card__title {
+      @include text-accent;
+    }
+  }
+
+  &--out-of-stock {
+    opacity: 0.7;
+    
+    .product-card__image {
+      filter: grayscale(50%);
+    }
+  }
+}
+
+// ===============================================
+// SECTION HEADER COMPONENT (BEM)
+// ===============================================
+
+.section-header {
+  @include card-base;
+  padding: $spacing-xl;
+  margin-bottom: $spacing-xl;
+
+  @include mobile-only {
+    padding: $spacing-lg;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__title {
+    @include heading-base;
+    font-size: $font-size-3xl;
+    margin-bottom: $spacing-sm;
+
+    @include mobile-only {
+      font-size: $font-size-2xl;
+    }
+  }
+
+  &__description {
+    @include text-secondary;
+    margin-bottom: 0;
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacing-md;
+    flex-wrap: wrap;
+
+    @include mobile-only {
+      flex-direction: column;
+    }
+  }
+}
+
+// ===============================================
+// SIDEBAR COMPONENT (BEM)
+// ===============================================
+
+.sidebar {
+  height: 100vh;
+  transition: transform $transition-base;
+  border-right: 1px solid $bg-tertiary;
+
+  // Elements
+  &__header {
+    border-bottom: 1px solid $bg-tertiary;
+    padding: $spacing-md;
+
+    @include desktop-up {
+      display: none;
+    }
+  }
+
+  &__content {
+    height: 100%;
+    overflow-y: auto;
+    padding: $spacing-md;
+  }
+
+  &__title {
+    @include heading-base;
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-sm;
+
+    @include mobile-only {
+      display: none;
+    }
+  }
+
+  &__description {
+    @include text-secondary;
+    font-size: $font-size-sm;
+    margin-bottom: $spacing-lg;
+
+    @include mobile-only {
+      display: none;
+    }
+  }
+
+  // States
+  &--desktop {
+    width: 280px;
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 80px);
+
+    &.sidebar--open {
+      transform: translateX(0);
+    }
+
+    &.sidebar--closed {
+      transform: translateX(-100%);
+    }
+  }
+
+  &--mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    z-index: $z-index-modal;
+    background: $bg-secondary;
+
+    &.sidebar--open {
+      transform: translateX(0);
+    }
+
+    &.sidebar--closed {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+// ===============================================
+// CATEGORY BUTTON COMPONENT (BEM)
+// ===============================================
+
+.category-btn {
+  width: 100%;
+  text-align: left;
+  padding: $spacing-md;
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  background: transparent;
+  @include text-secondary;
+  transition: all $transition-base;
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-sm;
+
+  &:hover {
+    background: $bg-tertiary;
+    @include text-primary;
+    transform: translateX(5px);
+  }
+
+  // Elements
+  &__icon {
+    margin-right: $spacing-md;
+    font-size: $font-size-lg;
+  }
+
+  &__name {
+    flex-grow: 1;
+  }
+
+  &__count {
+    font-size: $font-size-sm;
+    @include text-secondary;
+  }
+
+  // States
+  &--active {
+    background: $color-accent-primary;
+    color: $color-text-primary;
+    border-color: $color-accent-primary;
+
+    &:hover {
+      background: $color-accent-secondary;
+      border-color: $color-accent-secondary;
+    }
+
+    .category-btn__count {
+      color: $color-text-primary;
+    }
+  }
+
+  &--small {
+    padding: $spacing-sm;
+    font-size: $font-size-sm;
+    border-radius: $border-radius-sm;
+
+    .category-btn__icon {
+      font-size: $font-size-base;
+      margin-right: $spacing-sm;
+    }
+
+    &:hover {
+      transform: translateX(3px);
+    }
+  }
+}
+
+// ===============================================
+// MODAL COMPONENT (BEM)
+// ===============================================
+
+.modal {
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($bg-primary, 0.8);
+    z-index: $z-index-modal-backdrop;
+    @include backdrop-blur;
+  }
+
+  &__dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: $z-index-modal;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  &__content {
+    @include card-base;
+    border-radius: $border-radius-lg;
+  }
+
+  &__header {
+    padding: $spacing-lg;
+    border-bottom: 1px solid $bg-tertiary;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @include heading-base;
+    margin-bottom: 0;
+  }
+
+  &__body {
+    padding: $spacing-lg;
+  }
+
+  &__footer {
+    padding: $spacing-lg;
+    border-top: 1px solid $bg-tertiary;
+    display: flex;
+    gap: $spacing-md;
+    justify-content: flex-end;
+  }
+}
+
+// ===============================================
+// BADGE COMPONENT (BEM)
+// ===============================================
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: $spacing-xs $spacing-sm;
+  border-radius: $border-radius-xl;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  // Variants
+  &--accent {
+    background: $color-accent-primary;
+    color: $color-text-primary;
+  }
+
+  &--success {
+    background: rgba($color-success, 0.2);
+    color: $color-success;
+    border: 1px solid rgba($color-success, 0.3);
+  }
+
+  &--warning {
+    background: rgba($color-warning, 0.2);
+    color: $color-warning;
+    border: 1px solid rgba($color-warning, 0.3);
+  }
+
+  &--danger {
+    background: rgba($color-danger, 0.2);
+    color: $color-danger;
+    border: 1px solid rgba($color-danger, 0.3);
+  }
+
+  &--secondary {
+    background: rgba($color-text-secondary, 0.2);
+    color: $color-text-secondary;
+    border: 1px solid rgba($color-text-secondary, 0.3);
+  }
+
+  // Sizes
+  &--sm {
+    padding: 2px $spacing-xs;
+    font-size: 0.6rem;
+  }
+
+  &--lg {
+    padding: $spacing-sm $spacing-md;
+    font-size: $font-size-sm;
+  }
+}
+
+// ===============================================
+// FORM COMPONENTS (BEM)
+// ===============================================
+
+.form-group {
+  margin-bottom: $spacing-lg;
+
+  &__label {
+    @include text-primary;
+    font-weight: $font-weight-medium;
+    margin-bottom: $spacing-sm;
+    display: block;
+  }
+
+  &__input {
+    @include input-base;
+  }
+
+  &__select {
+    @include select-base;
+  }
+
+  &__error {
+    color: $color-danger;
+    font-size: $font-size-sm;
+    margin-top: $spacing-xs;
+  }
+
+  &__help {
+    @include text-secondary;
+    font-size: $font-size-sm;
+    margin-top: $spacing-xs;
+  }
+}
+

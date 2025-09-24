@@ -1,0 +1,373 @@
+// ===============================================
+// CLASSES UTILITÁRIAS - AGROVALE
+// ===============================================
+
+@import './variables.scss';
+@import './mixins.scss';
+
+// ===============================================
+// RESPONSIVIDADE
+// ===============================================
+
+.mobile-hidden {
+  @include mobile-only {
+    display: none !important;
+  }
+}
+
+.desktop-hidden {
+  @include desktop-up {
+    display: none !important;
+  }
+}
+
+.tablet-hidden {
+  @include tablet-only {
+    display: none !important;
+  }
+}
+
+.mobile-only {
+  display: block;
+  
+  @include tablet-up {
+    display: none !important;
+  }
+}
+
+.tablet-only {
+  display: none;
+  
+  @include tablet-only {
+    display: block !important;
+  }
+}
+
+.desktop-only {
+  display: none;
+  
+  @include desktop-up {
+    display: block !important;
+  }
+}
+
+// ===============================================
+// BACKGROUNDS E GRADIENTES
+// ===============================================
+
+.bg-gradient-primary {
+  background: $gradient-primary;
+}
+
+.bg-gradient-accent {
+  background: $gradient-accent;
+}
+
+.bg-gradient-dark {
+  background: $gradient-dark;
+}
+
+.bg-primary-custom {
+  background-color: $bg-primary;
+}
+
+.bg-secondary-custom {
+  background-color: $bg-secondary;
+}
+
+.bg-tertiary-custom {
+  background-color: $bg-tertiary;
+}
+
+.bg-darker {
+  background-color: $bg-darker;
+}
+
+// ===============================================
+// CORES DE TEXTO
+// ===============================================
+
+.text-primary-custom {
+  @include text-primary;
+}
+
+.text-secondary-custom {
+  @include text-secondary;
+}
+
+.text-accent {
+  @include text-accent;
+}
+
+.text-muted-custom {
+  color: $color-text-muted;
+}
+
+// ===============================================
+// CARDS E CONTAINERS
+// ===============================================
+
+.card-dark {
+  @include card-base;
+  
+  &:hover {
+    @include card-hover;
+  }
+}
+
+.card-light {
+  background: rgba($color-text-primary, 0.05);
+  border: 1px solid rgba($color-text-primary, 0.1);
+  border-radius: $border-radius-lg;
+}
+
+.card-light-2 {
+  background: rgba($color-text-primary, 0.03);
+  border: 1px solid rgba($color-text-primary, 0.08);
+  border-radius: $border-radius-lg;
+}
+
+// ===============================================
+// BOTÕES CUSTOMIZADOS
+// ===============================================
+
+.btn-accent {
+  @include button-accent;
+}
+
+.btn-outline-accent {
+  @include button-outline-accent;
+}
+
+// ===============================================
+// SOMBRAS
+// ===============================================
+
+.shadow-sm-custom {
+  box-shadow: $shadow-sm;
+}
+
+.shadow-custom {
+  box-shadow: $shadow;
+}
+
+.shadow-lg-custom {
+  box-shadow: $shadow-lg;
+}
+
+// ===============================================
+// ANIMAÇÕES
+// ===============================================
+
+.fade-in-up {
+  @include fade-in-up;
+}
+
+.fade-in {
+  @include fade-in;
+}
+
+.scale-hover {
+  @include scale-on-hover;
+}
+
+// ===============================================
+// ESPAÇAMENTOS CUSTOMIZADOS
+// ===============================================
+
+.p-xs { padding: $spacing-xs; }
+.p-sm { padding: $spacing-sm; }
+.p-md { padding: $spacing-md; }
+.p-lg { padding: $spacing-lg; }
+.p-xl { padding: $spacing-xl; }
+.p-2xl { padding: $spacing-2xl; }
+.p-3xl { padding: $spacing-3xl; }
+
+.m-xs { margin: $spacing-xs; }
+.m-sm { margin: $spacing-sm; }
+.m-md { margin: $spacing-md; }
+.m-lg { margin: $spacing-lg; }
+.m-xl { margin: $spacing-xl; }
+.m-2xl { margin: $spacing-2xl; }
+.m-3xl { margin: $spacing-3xl; }
+
+// Apenas top
+.pt-xs { padding-top: $spacing-xs; }
+.pt-sm { padding-top: $spacing-sm; }
+.pt-md { padding-top: $spacing-md; }
+.pt-lg { padding-top: $spacing-lg; }
+.pt-xl { padding-top: $spacing-xl; }
+.pt-2xl { padding-top: $spacing-2xl; }
+.pt-3xl { padding-top: $spacing-3xl; }
+
+.mt-xs { margin-top: $spacing-xs; }
+.mt-sm { margin-top: $spacing-sm; }
+.mt-md { margin-top: $spacing-md; }
+.mt-lg { margin-top: $spacing-lg; }
+.mt-xl { margin-top: $spacing-xl; }
+.mt-2xl { margin-top: $spacing-2xl; }
+.mt-3xl { margin-top: $spacing-3xl; }
+
+// Apenas bottom
+.pb-xs { padding-bottom: $spacing-xs; }
+.pb-sm { padding-bottom: $spacing-sm; }
+.pb-md { padding-bottom: $spacing-md; }
+.pb-lg { padding-bottom: $spacing-lg; }
+.pb-xl { padding-bottom: $spacing-xl; }
+.pb-2xl { padding-bottom: $spacing-2xl; }
+.pb-3xl { padding-bottom: $spacing-3xl; }
+
+.mb-xs { margin-bottom: $spacing-xs; }
+.mb-sm { margin-bottom: $spacing-sm; }
+.mb-md { margin-bottom: $spacing-md; }
+.mb-lg { margin-bottom: $spacing-lg; }
+.mb-xl { margin-bottom: $spacing-xl; }
+.mb-2xl { margin-bottom: $spacing-2xl; }
+.mb-3xl { margin-bottom: $spacing-3xl; }
+
+// ===============================================
+// FLEXBOX UTILITÁRIOS
+// ===============================================
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.flex-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// ===============================================
+// BORDAS E RADIUS
+// ===============================================
+
+.rounded-sm {
+  border-radius: $border-radius-sm;
+}
+
+.rounded {
+  border-radius: $border-radius;
+}
+
+.rounded-lg {
+  border-radius: $border-radius-lg;
+}
+
+.rounded-xl {
+  border-radius: $border-radius-xl;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+// ===============================================
+// OVERLAY E POSICIONAMENTO
+// ===============================================
+
+.overlay {
+  @include overlay;
+}
+
+.overlay-dark {
+  @include overlay;
+  background: rgba($bg-primary, 0.7);
+}
+
+.overlay-blur {
+  @include overlay;
+  @include backdrop-blur;
+}
+
+// ===============================================
+// ANIMAÇÕES KEYFRAMES
+// ===============================================
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+// ===============================================
+// TEXT UTILITIES
+// ===============================================
+
+.text-truncate-1 {
+  @include text-truncate(1);
+}
+
+.text-truncate-2 {
+  @include text-truncate(2);
+}
+
+.text-truncate-3 {
+  @include text-truncate(3);
+}
+
+.letter-spacing {
+  letter-spacing: 1px;
+}
+

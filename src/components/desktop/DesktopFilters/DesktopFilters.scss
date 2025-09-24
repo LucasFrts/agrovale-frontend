@@ -1,0 +1,26 @@
+// ===== DESKTOPFILTERS COMPONENT - BEM =====
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+// ===== BASE COMPONENT =====
+.desktop-filters {
+  background: var(--white-pure);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-light);
+  height: fit-content;
+  position: sticky;
+  top: 120px;
+  width: 100%;
+  max-width: 400px;
+  min-width: 300px;
+}
+
+// ===== CLASSES DE VISIBILIDADE =====
+// Desktop filters só aparecem em desktop
+@media (max-width: 991px) {
+  .desktop-filters {
+    display: none !important;
+  }
+}
