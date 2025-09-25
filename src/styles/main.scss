@@ -240,7 +240,6 @@ body {
 
 // ===== CORREÇÃO: BTN-ACCENT EM BOTÕES DE AÇÃO PRINCIPAIS (LARANJA) =====
 // Sobrescrever btn-accent quando usado em contextos que devem ser laranja
-.action-buttons .btn-accent,
 .promotional-btn.btn-accent,
 .cta-buttons .btn-accent,
 .slide-actions .btn-accent,
@@ -276,6 +275,48 @@ body {
     color: var(--white-pure) !important;
     --bs-btn-active-bg: #a6330e !important;
     --bs-btn-active-border-color: #a6330e !important;
+  }
+}
+
+// ===== BOTÕES DE CARRINHO ESPECÍFICOS (SEM PISCAR) =====
+.action-buttons .btn-accent {
+  background-color: var(--orange-accent) !important;
+  border-color: var(--orange-accent) !important;
+  color: var(--white-pure) !important;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease !important;
+  
+  &:hover:not(:disabled) {
+    background-color: #bf3d10 !important;
+    border-color: #bf3d10 !important;
+    color: var(--white-pure) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(191, 61, 16, 0.3) !important;
+  }
+  
+  &:focus:not(:disabled) {
+    background-color: var(--orange-accent) !important;
+    border-color: var(--orange-accent) !important;
+    color: var(--white-pure) !important;
+    box-shadow: 0 0 0 0.2rem rgba(191, 61, 16, 0.25) !important;
+    --bs-btn-focus-box-shadow: 0 0 0 0.2rem rgba(191, 61, 16, 0.25) !important;
+  }
+  
+  &:active:not(:disabled) {
+    background-color: #a6330e !important;
+    border-color: #a6330e !important;
+    color: var(--white-pure) !important;
+    transform: translateY(0) !important;
+    --bs-btn-active-bg: #a6330e !important;
+    --bs-btn-active-border-color: #a6330e !important;
+  }
+  
+  &:disabled {
+    background-color: #ccc !important;
+    border-color: #ccc !important;
+    color: #666 !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+    box-shadow: none !important;
   }
 }
 

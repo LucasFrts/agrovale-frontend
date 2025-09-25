@@ -42,7 +42,7 @@
     "preco": 180.21,
     "prazo_entrega": "20 dias",
     "localizacao": "Curitiba",
-    "imagem": ""
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA CÃES/Special dog junior 15kg.jpg"
   },
   {
     "categoria": "Rações para Cachorro",
@@ -51,7 +51,7 @@
     "preco": 140.31,
     "prazo_entrega": "20 dias",
     "localizacao": "Curitiba",
-    "imagem": ""
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA CÃES/Special dog carne 20kg.jpg"
   },
   {
     "categoria": "Rações para Cachorro",
@@ -60,7 +60,7 @@
     "preco": 114.79,
     "prazo_entrega": "20 dias",
     "localizacao": "Salto de Pirapora",
-    "imagem": ""
+    "imagem": "src/assets/imagem/produtos/RAÇÕES PARA CÃES/Magnus dog supreme 15kg.jpg"
   },
   {
     "categoria": "Rações para Cachorro",

@@ -89,6 +89,7 @@
     }
   }
 
+
   &__content {
     padding: 0.75rem 0.875rem 0.875rem; // Padding ainda mais reduzido
     display: flex;
@@ -348,4 +349,13 @@
       min-height: 1.75rem;
     }
   }
+}
+
+// Classe para limitar tamanho das imagens dos produtos
+.product-image-fixed-size {
+  max-width: 318px !important;
+  max-height: 318px !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover !important;
 }

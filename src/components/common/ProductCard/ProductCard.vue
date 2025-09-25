@@ -19,7 +19,7 @@
         <img 
           :src="product.image" 
           :alt="product.name"
-          class="product-image w-100"
+          class="product-image w-100 product-image-fixed-size"
           @error="handleImageError"
         >
         
