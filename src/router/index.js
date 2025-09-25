@@ -36,7 +36,7 @@ const routes = [
 
 // Criação do router
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/agrovale-frontend/'),
   routes,
   scrollBehavior(to, from, savedPosition) {
     // Comportamento de scroll suave
