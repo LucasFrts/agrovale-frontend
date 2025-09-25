@@ -25,12 +25,14 @@ export const useProductStore = defineStore('products', () => {
         return 'https://via.placeholder.com/300x300/2d2d2d/ffffff?text=Produto'
       }
       
-      // Converter caminho de src/assets para /images/
+      // Converter caminho de src/assets para /images/ com base path correto
       const publicPath = imagePath
         .replace('src/assets/imagem/produtos/', '/images/produtos/')
         .replace(/\\/g, '/') // Normalizar separadores de caminho
       
-      return publicPath
+      // Usar BASE_URL do Vite para incluir o base path correto
+      const baseUrl = import.meta.env.BASE_URL
+      return baseUrl + publicPath.substring(1) // Remove a barra inicial para evitar duplicação
     }
     
     return {
