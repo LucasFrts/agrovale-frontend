@@ -19,11 +19,25 @@ export const useProductStore = defineStore('products', () => {
     const hasValidPrice = produto.preco !== 'Não preenchido' && typeof produto.preco === 'number'
     const hasImage = produto.imagem && produto.imagem.trim() !== ''
     
+    // Função para converter caminho da imagem para caminho público
+    function getImagePath(imagePath) {
+      if (!imagePath || imagePath.trim() === '') {
+        return 'https://via.placeholder.com/300x300/2d2d2d/ffffff?text=Produto'
+      }
+      
+      // Converter caminho de src/assets para /images/
+      const publicPath = imagePath
+        .replace('src/assets/imagem/produtos/', '/images/produtos/')
+        .replace(/\\/g, '/') // Normalizar separadores de caminho
+      
+      return publicPath
+    }
+    
     return {
       id: index + 1,
       name: produto.descricao,
       price: hasValidPrice ? produto.preco : 0,
-      image: hasImage ? `/${produto.imagem}` : 'https://via.placeholder.com/300x300/2d2d2d/ffffff?text=Produto',
+      image: getImagePath(produto.imagem),
       category: normalizeCategoryId(produto.categoria),
       description: produto.descricao || `${produto.categoria}`,
       inStock: produto.fornecedor !== 'Não preenchido' && hasValidPrice,
