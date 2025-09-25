@@ -96,38 +96,7 @@ function closeNavigationSidebar() {
   isNavigationSidebarOpen.value = false
 }
 
-// Função removida - controle de mobile agora é feito em cada página
-function checkScreenSize() {
-  isMobile.value = window.innerWidth < 992
-}
-
-// Debounced resize handler para melhor performance
-let resizeTimeout = null
-function handleResize() {
-  clearTimeout(resizeTimeout)
-  resizeTimeout = setTimeout(() => {
-    checkScreenSize()
-  }, 100) // Debounce de 100ms
-}
-
-// Lifecycle hooks
-import { onMounted, onUnmounted } from 'vue'
-
-onMounted(() => {
-  // Verificar tamanho inicial da tela
-  checkScreenSize()
-  
-  // Adicionar listener para mudanças de tamanho da tela
-  window.addEventListener('resize', handleResize)
-})
-
-onUnmounted(() => {
-  // Remover listener e limpar timeout
-  window.removeEventListener('resize', handleResize)
-  if (resizeTimeout) {
-    clearTimeout(resizeTimeout)
-  }
-})
+// Controle de mobile removido - agora é feito em cada página individualmente
 </script>
 
 <style scoped>
