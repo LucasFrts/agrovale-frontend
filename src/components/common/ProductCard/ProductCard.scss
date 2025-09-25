@@ -169,22 +169,6 @@
     }
   }
 
-  &__rating {
-    &-container {
-      display: flex;
-      align-items: center;
-    }
-
-    &-stars {
-      color: #fbbf24;
-      margin-right: 0.25rem;
-    }
-
-    &-text {
-      color: #718096;
-      font-size: 0.875rem;
-    }
-  }
 
   &__status {
     &-container {

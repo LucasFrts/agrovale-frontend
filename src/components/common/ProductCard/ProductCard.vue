@@ -13,16 +13,6 @@
         </span>
       </div>
       
-      <!-- Badge de Avaliação -->
-      <div 
-        class="position-absolute top-0 end-0 m-2"
-        style="z-index: 10;"
-      >
-        <div class="rating-badge bg-dark bg-opacity-75 rounded-pill px-2 py-1">
-          <i class="bi bi-star-fill text-warning me-1"></i>
-          <span class="text-white small fw-bold">{{ product.rating }}</span>
-        </div>
-      </div>
 
       <!-- Imagem do Produto -->
       <div class="product-image-container position-relative overflow-hidden">
