@@ -97,6 +97,9 @@ function closeNavigationSidebar() {
 }
 
 // Função removida - controle de mobile agora é feito em cada página
+function checkScreenSize() {
+  isMobile.value = window.innerWidth < 992
+}
 
 // Debounced resize handler para melhor performance
 let resizeTimeout = null
