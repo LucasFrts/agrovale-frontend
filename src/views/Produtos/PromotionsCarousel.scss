@@ -159,20 +159,6 @@
         font-size: 1.3rem;
       }
 
-      &-rating {
-        display: flex;
-        align-items: center;
-
-        .rating-star {
-          color: #fbbf24; // Amarelo para estrelas
-          margin-right: 0.25rem;
-        }
-
-        .rating-text {
-          color: var(--dark-3);
-          font-size: 0.875rem;
-        }
-      }
     }
 
     &-status {

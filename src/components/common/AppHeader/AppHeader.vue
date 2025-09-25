@@ -14,8 +14,12 @@
         <!-- Logo -->
         <router-link :to="{ name: 'Home' }" class="navbar-brand d-flex align-items-center text-decoration-none">
           <div class="logo-container d-flex align-items-center">
-            <div class="logo-icon bg-gradient rounded-circle p-2 me-2">
-              <i class="bi bi-tree-fill text-primary-custom fs-4"></i>
+            <div class="logo-icon me-2">
+              <img 
+                :src="logoImage" 
+                alt="Agrovale Agropequária" 
+                class="logo-image"
+              />
             </div>
             <div class="logo-text">
               <h4 class="mb-0 text-primary-custom fw-bold">AGROVALE</h4>
@@ -127,6 +131,7 @@
 import { ref, computed } from 'vue'
 import { useProductStore } from '../../../stores/products'
 import InputText from '../InputText/InputText.vue'
+import logoImage from '../../../assets/imagem/agrovale.jpeg'
 
 const productStore = useProductStore()
 

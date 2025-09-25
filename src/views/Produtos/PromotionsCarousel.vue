@@ -100,10 +100,6 @@
                             R$ {{ formatPrice(product.price) }}
                           </span>
                         </div>
-                        <div class="promotions-carousel__card-price-rating">
-                          <i class="bi bi-star-fill rating-star"></i>
-                          <span class="rating-text">{{ product.rating }}</span>
-                        </div>
                       </div>
                     </div>
 
